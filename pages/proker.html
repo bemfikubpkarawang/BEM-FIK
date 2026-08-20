@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Kerja | BEM Fakultas Ilmu Komputer</title>
+    <meta name="description" content="Daftar program kerja Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang Periode 2026.">
+    <meta name="keywords" content="Program Kerja BEM FIK, Proker BEM FIK, Kegiatan BEM FIK, UBP Karawang">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
+
+    <link rel="icon" href="../assets/logo/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Header & Navbar -->
+    <header id="header"></header>
+
+    <main>
+        <!-- ================= HERO PROKER ================= -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-grid">
+                    <div class="page-header-content">
+                        <span class="page-badge">
+                            <i class="ri-flag-2-line"></i> Rencana Aksi
+                        </span>
+
+                        <h1>
+                            Program Kerja BEM FIK 2026
+                        </h1>
+
+                        <p>
+                            Seluruh agenda dan inisiatif program kerja yang disusun untuk mendukung peningkatan mutu akademik, pengembangan soft skills, sportivitas, dan pengabdian mahasiswa Fakultas Ilmu Komputer.
+                        </p>
+
+                        <div class="page-action">
+                            <a href="#programList" class="btn btn-primary">
+                                <i class="ri-list-check"></i> Jelajahi Program
+                            </a>
+                            <a href="divisi.html" class="btn btn-outline">
+                                <i class="ri-git-merge-line"></i> Divisi Terkait
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="page-header-image">
+                        <img src="../assets/images/about/about-banner.jpg" alt="Program Kerja BEM FIK" onerror="handleImageError(this)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-blob blob-1"></div>
+            <div class="page-blob blob-2"></div>
+        </section>
+
+        <!-- ================= STATISTIK PROKER ================= -->
+        <section class="program-stats stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h2 id="totalProgram">-</h2>
+                        <span>Total Program</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="ongoingProgram">0</h2>
+                        <span>Sedang Berjalan</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="doneProgram">0</h2>
+                        <span>Telah Selesai</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="divisionInvolved">4</h2>
+                        <span>Departemen Terlibat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FILTER SECTION ================= -->
+        <section class="filter-section" id="programList">
+            <div class="container">
+                <div class="filter-wrapper">
+                    <div class="search-input-wrapper">
+                        <i class="ri-search-line"></i>
+                        <input
+                            type="text"
+                            id="searchProgram"
+                            placeholder="Cari program kerja, kata kunci, divisi..."
+                            aria-label="Cari program kerja">
+                    </div>
+
+                    <div class="select-filters">
+                        <select id="statusFilter" aria-label="Filter berdasarkan status">
+                            <option value="">Semua Status</option>
+                            <option value="direncanakan">Direncanakan</option>
+                            <option value="berjalan">Sedang Berjalan</option>
+                            <option value="selesai">Selesai</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= LIST PROGRAM ================= -->
+        <section class="program-page section">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Daftar Kegiatan</span>
+                    <h2>Seluruh Program Kerja</h2>
+                    <p>
+                        Pilih kartu program kerja untuk membaca rincian tujuan, deskripsi lengkap, sasaran, dan hasil yang diharapkan.
+                    </p>
+                </div>
+
+                <div class="card-grid program-grid" id="programGrid">
+                    <!-- Render otomatis oleh app.js -->
+                </div>
+
+                <div id="programEmpty" class="empty-state" style="display: none;">
+                    <i class="ri-search-line" style="font-size: 32px; color: var(--primary); margin-bottom: 10px; display: block;"></i>
+                    <h3>Program Kerja Tidak Ditemukan</h3>
+                    <p>Coba gunakan kata kunci lain atau pilih status yang berbeda.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="cta section">
+            <div class="container">
+                <div class="cta-box">
+                    <span class="section-subtitle">Kemitraan & Kolaborasi</span>
+                    <h2>Tertarik Berkolaborasi dalam Program Kami?</h2>
+                    <p>
+                        BEM FIK senantiasa terbuka menerima kemitraan sponsorship, media partner, serta partisipasi aktif seluruh mahasiswa dalam setiap kegiatan.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="kontak.html" class="btn btn-primary">
+                            <i class="ri-mail-line"></i> Ajukan Kolaborasi
+                        </a>
+                        <a href="aspirasi.html" class="btn btn-outline">
+                            <i class="ri-chat-3-line"></i> Kirim Masukan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="../js/data-loader.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

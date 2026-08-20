@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Program Kerja | BEM FIK</title>
+    <meta name="description" content="Informasi lengkap tujuan, deskripsi, sasaran, dan luaran program kerja BEM Fakultas Ilmu Komputer UBP Karawang.">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
+
+    <link rel="icon" href="../assets/logo/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Header & Navbar -->
+    <header id="header"></header>
+
+    <main>
+        <!-- ================= BREADCRUMB ================= -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li><a href="../index.html"><i class="ri-home-4-line"></i> Beranda</a></li>
+                    <li><i class="ri-arrow-right-s-line"></i></li>
+                    <li><a href="proker.html">Program Kerja</a></li>
+                    <li><i class="ri-arrow-right-s-line"></i></li>
+                    <li id="breadcrumbCurrent" class="active">Detail Program</li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ================= HERO DETAIL PROKER ================= -->
+        <section class="page-header proker-detail-hero">
+            <div class="container">
+                <div class="page-header-content text-center">
+                    <span class="page-badge" id="programDivision">
+                        <i class="ri-flag-2-line"></i> Memuat Divisi...
+                    </span>
+
+                    <h1 id="programTitle">
+                        Memuat Program Kerja...
+                    </h1>
+
+                    <p id="programSummary">
+                        Memuat ringkasan informasi program kerja...
+                    </p>
+                </div>
+            </div>
+
+            <div class="page-blob blob-1"></div>
+            <div class="page-blob blob-2"></div>
+        </section>
+
+        <!-- ================= DETAIL CONTENT ================= -->
+        <section class="section proker-detail-section">
+            <div class="container">
+                <div class="detail-card">
+                    <!-- Meta Grid -->
+                    <div class="detail-meta-grid">
+                        <div class="detail-meta-item">
+                            <i class="ri-building-line"></i>
+                            <div>
+                                <small>Departemen Penanggung Jawab</small>
+                                <strong id="programDivisi">-</strong>
+                            </div>
+                        </div>
+
+                        <div class="detail-meta-item">
+                            <i class="ri-calendar-line"></i>
+                            <div>
+                                <small>Periode Pelaksanaan</small>
+                                <strong id="programTimeline">-</strong>
+                            </div>
+                        </div>
+
+                        <div class="detail-meta-item">
+                            <i class="ri-flag-line"></i>
+                            <div>
+                                <small>Status Pelaksanaan</small>
+                                <div id="programStatus"><span class="program-status-badge status-direncanakan">Direncanakan</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Text Info -->
+                    <div class="detail-content-blocks">
+                        <div class="detail-block">
+                            <h3><i class="ri-focus-2-line"></i> Tujuan Program</h3>
+                            <p id="programGoal">Memuat tujuan program kerja...</p>
+                        </div>
+
+                        <div class="detail-block">
+                            <h3><i class="ri-file-text-line"></i> Deskripsi Lengkap</h3>
+                            <p id="programDescription">Memuat deskripsi lengkap...</p>
+                        </div>
+
+                        <div class="detail-block">
+                            <h3><i class="ri-user-star-line"></i> Sasaran Program</h3>
+                            <ul id="programTarget" class="styled-list">
+                                <!-- Diisi otomatis via detail.js -->
+                            </ul>
+                        </div>
+
+                        <div class="detail-block">
+                            <h3><i class="ri-checkbox-circle-line"></i> Output yang Diharapkan</h3>
+                            <ul id="programOutput" class="styled-list">
+                                <!-- Diisi otomatis via detail.js -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DOKUMENTASI TERKAIT ================= -->
+        <section class="section documentation-section">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Dokumentasi</span>
+                    <h2>Dokumentasi Pelaksanaan</h2>
+                    <p>Foto dan rekam jejak pelaksanaan kegiatan program kerja.</p>
+                </div>
+
+                <div class="gallery-grid" id="programGallery">
+                    <!-- Diisi otomatis via detail.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROGRAM TERKAIT ================= -->
+        <section class="section related-section">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Departemen Terkait</span>
+                    <h2>Program Lain dari Departemen yang Sama</h2>
+                    <p>Jelajahi agenda inisiatif lainnya dalam divisi ini.</p>
+                </div>
+
+                <div class="card-grid program-grid" id="relatedPrograms">
+                    <!-- Diisi otomatis via detail.js -->
+                </div>
+
+                <div class="section-action">
+                    <a href="proker.html" class="btn btn-outline">
+                        <i class="ri-arrow-left-line"></i> Kembali ke Daftar Semua Program
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="../js/data-loader.js"></script>
+    <script src="../js/detail.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

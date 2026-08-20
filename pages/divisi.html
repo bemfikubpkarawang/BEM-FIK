@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departemen & Divisi | BEM Fakultas Ilmu Komputer</title>
+    <meta name="description" content="Kenali seluruh departemen dan divisi Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang.">
+    <meta name="keywords" content="Divisi BEM FIK, Departemen BEM FIK, KOMINFO, MINBA, PSDM, SOSPOL, UBP Karawang">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
+
+    <link rel="icon" href="../assets/logo/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Header & Navbar -->
+    <header id="header"></header>
+
+    <main>
+        <!-- ================= HERO DIVISI ================= -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-grid">
+                    <div class="page-header-content">
+                        <span class="page-badge">
+                            <i class="ri-git-merge-line"></i> Struktur Organisasi
+                        </span>
+
+                        <h1>
+                            Departemen & Divisi BEM FIK
+                        </h1>
+
+                        <p>
+                            Struktur organisasi BEM Fakultas Ilmu Komputer terdiri dari 4 departemen utama yang berkolaborasi dalam menjalankan amanah dan merealisasikan program kerja secara profesional.
+                        </p>
+
+                        <div class="page-action">
+                            <a href="#divisionList" class="btn btn-primary">
+                                <i class="ri-layout-grid-line"></i> Seluruh Departemen
+                            </a>
+                            <a href="pengurus.html" class="btn btn-outline">
+                                <i class="ri-team-line"></i> Susunan Pengurus
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="page-header-image">
+                        <img src="../assets/images/about/about-banner.jpg" alt="Divisi BEM FIK" onerror="handleImageError(this)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-blob blob-1"></div>
+            <div class="page-blob blob-2"></div>
+        </section>
+
+        <!-- ================= STATISTIK ================= -->
+        <section class="division-stats stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h2 id="divisionCount">4</h2>
+                        <span>Departemen & Divisi</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="memberCount">21</h2>
+                        <span>Total Pengurus</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="programCount">22</h2>
+                        <span>Program Kerja</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DAFTAR DIVISI ================= -->
+        <section class="division section" id="divisionList">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Departemen BEM FIK</span>
+                    <h2>Kenali Seluruh Departemen</h2>
+                    <p>
+                        Setiap departemen memiliki visi, misi, tupoksi, serta program kerja terarah untuk melayani dan mengembangkan potensi mahasiswa Fakultas Ilmu Komputer.
+                    </p>
+                </div>
+
+                <div class="division-grid" id="divisionContainer">
+                    <!-- Render otomatis dari divisi.json via app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="division-cta section">
+            <div class="container">
+                <div class="cta-box">
+                    <span class="section-subtitle">Aspirasi & Sinergi</span>
+                    <h2>Ingin Berkolaborasi dengan Departemen BEM?</h2>
+                    <p>
+                        Kami menyambut baik inisiatif kolaborasi kegiatan, usulan program kemahasiswaan, maupun pertanyaan seputar departemen terkait.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="kontak.html" class="btn btn-primary">
+                            <i class="ri-mail-line"></i> Hubungi Kami
+                        </a>
+                        <a href="proker.html" class="btn btn-outline">
+                            <i class="ri-flag-2-line"></i> Program Kerja
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="../js/data-loader.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

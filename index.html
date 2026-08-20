@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Fakultas Ilmu Komputer | Universitas Buana Perjuangan Karawang</title>
+    <meta name="description" content="Website Resmi Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer (BEM FIK) Universitas Buana Perjuangan Karawang.">
+    <meta name="keywords" content="BEM, FIK, Fakultas Ilmu Komputer, UBP Karawang, Organisasi Mahasiswa, Mahasiswa, Teknologi">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Header & Navbar -->
+    <header id="header"></header>
+
+    <main>
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-blob blob-1"></div>
+            <div class="hero-blob blob-2"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">
+                        <i class="ri-flashlight-line"></i> BEM Fakultas Ilmu Komputer Periode 2026
+                    </span>
+
+                    <h1 id="heroTitle">
+                        Bersama Berkarya untuk Fakultas Ilmu Komputer
+                    </h1>
+
+                    <p id="heroDescription">
+                        Membangun kolaborasi, menciptakan inovasi, serta menghadirkan program kerja yang berdampak bagi seluruh mahasiswa Fakultas Ilmu Komputer.
+                    </p>
+
+                    <div class="hero-image mobile-hero-image">
+                        <img
+                            src="assets/images/hero/hero-bem.jpg"
+                            id="heroImage"
+                            alt="Pengurus BEM FIK"
+                            onerror="handleImageError(this)">
+                    </div>
+
+                    <div class="hero-button">
+                        <a href="pages/divisi.html" class="btn btn-primary">
+                            <i class="ri-layout-grid-line"></i> Lihat Divisi
+                        </a>
+                        <a href="pages/aspirasi.html" class="btn btn-outline">
+                            <i class="ri-chat-voice-line"></i> Kirim Aspirasi
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image desktop-hero-image">
+                    <img
+                        src="assets/images/hero/hero-bem.jpg"
+                        alt="Pengurus BEM FIK"
+                        onerror="handleImageError(this)">
+                </div>
+            </div>
+
+            <div class="scroll-down">
+                <span></span>
+            </div>
+        </section>
+
+        <!-- ================= STATISTIK ================= -->
+        <section class="program-stats stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h2 id="statDivisi">4</h2>
+                        <span>Departemen & Divisi</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="statProgram">22</h2>
+                        <span>Program Kerja</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h2 id="statPengurus">21</h2>
+                        <span>Pengurus Aktif</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT SECTION ================= -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Tentang Kami</span>
+                    <h2>Mengenal BEM Fakultas Ilmu Komputer</h2>
+                    <p>Wadah aspirasi, inovasi, dan pergerakan kemahasiswaan Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img
+                            id="aboutImage"
+                            src="assets/images/about/about-banner.jpg"
+                            alt="Tentang BEM FIK"
+                            onerror="handleImageError(this)">
+                    </div>
+
+                    <div class="about-content">
+                        <h3 id="aboutTitle">Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer</h3>
+                        <p id="aboutDescription">
+                            Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer merupakan organisasi kemahasiswaan yang menjadi wadah aspirasi, kolaborasi, pengembangan potensi, serta penggerak berbagai kegiatan akademik maupun non-akademik bagi seluruh mahasiswa Fakultas Ilmu Komputer.
+                        </p>
+                        <div class="about-action">
+                            <a href="pages/tentang.html" class="btn btn-primary">
+                                Profil Lengkap <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VISI & MISI ================= -->
+        <section class="vision section" id="vision">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Arah Pergerakan</span>
+                    <h2>Visi & Misi Organisasi</h2>
+                    <p>Landasan nilai dan komitmen strategis dalam mewujudkan kepengurusan yang berdampak nyata.</p>
+                </div>
+
+                <div class="vision-grid" id="visiMisiContainer">
+                    <!-- Diisi otomatis oleh app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DIVISI ================= -->
+        <section class="division section" id="division">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Struktur Departemen</span>
+                    <h2>Departemen & Divisi BEM FIK</h2>
+                    <p>Setiap departemen memiliki peran strategis dalam mendukung akselerasi dan keberhasilan seluruh program organisasi.</p>
+                </div>
+
+                <div class="division-grid" id="divisionContainer">
+                    <!-- Generate dari divisi.json via app.js -->
+                </div>
+
+                <div class="section-action">
+                    <a href="pages/divisi.html" class="btn btn-primary">
+                        Lihat Seluruh Divisi <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PENGURUS ================= -->
+        <section class="management section" id="management">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Kepengurusan</span>
+                    <h2>Badan Pengurus Harian</h2>
+                    <p>Pimpinan inti Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer Periode 2026.</p>
+                </div>
+
+                <div class="management-grid" id="managementContainer">
+                    <!-- Generate dari pengurus.json via app.js -->
+                </div>
+
+                <div class="section-action">
+                    <a href="pages/pengurus.html" class="btn btn-primary">
+                        Lihat Seluruh Pengurus <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROGRAM KERJA ================= -->
+        <section class="program section" id="program">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Program Kerja</span>
+                    <h2>Program Kerja Unggulan</h2>
+                    <p>Rangkaian program kerja inovatif yang dirancang untuk memberikan dampak positif bagi seluruh mahasiswa.</p>
+                </div>
+
+                <div class="program-grid" id="programContainer">
+                    <!-- Generate dari proker.json via app.js -->
+                </div>
+
+                <div class="section-action">
+                    <a href="pages/proker.html" class="btn btn-primary">
+                        Lihat Semua Program Kerja <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= INFORMASI ================= -->
+        <section class="information section" id="information">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Kabar Terbaru</span>
+                    <h2>Berita & Pengumuman</h2>
+                    <p>Informasi aktual mengenai agenda kegiatan, prestasi mahasiswa, dan pengumuman resmi BEM FIK.</p>
+                </div>
+
+                <div class="information-grid" id="informationContainer">
+                    <!-- Generate dari informasi.json via app.js -->
+                </div>
+
+                <div class="section-action">
+                    <a href="pages/informasi.html" class="btn btn-primary">
+                        Lihat Semua Berita <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALERI ================= -->
+        <section class="gallery section" id="gallery">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Dokumentasi</span>
+                    <h2>Galeri Kegiatan</h2>
+                    <p>Dokumentasi momen berharga dari berbagai agenda, pelatihan, dan kegiatan kemahasiswaan.</p>
+                </div>
+
+                <div class="gallery-grid" id="galleryContainer">
+                    <!-- Generate dari galeri.json via app.js -->
+                </div>
+
+                <div class="section-action">
+                    <a href="pages/galeri.html" class="btn btn-primary">
+                        Buka Galeri Lengkap <i class="ri-image-line"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="cta section" id="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <span class="section-subtitle">Aspirasi Mahasiswa</span>
+                    <h2>Suara Mahasiswa, Langkah Perubahan.</h2>
+                    <p>
+                        Kritik, saran, maupun ide yang membangun sangat berarti bagi kemajuan Fakultas Ilmu Komputer. Mari bersama menciptakan lingkungan akademik yang lebih aktif, inklusif, dan berprestasi.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="pages/aspirasi.html" class="btn btn-primary">
+                            <i class="ri-chat-3-line"></i> Kirim Aspirasi
+                        </a>
+                        <a href="pages/kontak.html" class="btn btn-outline">
+                            <i class="ri-customer-service-2-line"></i> Hubungi Kami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="js/data-loader.js"></script>
+    <script src="js/detail.js"></script>
+    <script src="js/divisi.js"></script>
+    <script src="js/informasi.js"></script>
+    <script src="js/galeri.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

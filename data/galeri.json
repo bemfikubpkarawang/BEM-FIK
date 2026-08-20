@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "judul": "Pelantikan BEM & BLM Fakultas Ilmu Komputer",
+    "kategori": "Kegiatan",
+    "tanggal": "2026-07-22",
+    "thumbnail": "assets/images/galeri/oprec-2-thumb.jpg",
+    "gambar": [
+      "assets/images/galeri/oprec-2.jpg",
+      "assets/images/galeri/oprec-2-1.jpg",
+      "assets/images/galeri/oprec-2-2.jpg",
+      "assets/images/galeri/oprec-2-3.jpg"
+    ],
+    "deskripsi": "Dokumentasi kegiatan Pelantikan Pengurus BEM & BLM Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang Periode 2026."
+  }
+]
