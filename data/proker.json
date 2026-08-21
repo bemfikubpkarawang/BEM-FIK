@@ -43,30 +43,30 @@
     ],
     "galeri": []
   },
-{
-  "id": 3,
-  "nama": "Pekan Olahraga Mahasiswa (POM)",
-  "slug": "pom",
-  "icon": "ri-trophy-line",
-  "kategori": "Program Utama",
-  "divisi": "BEM FIK",
-  "status": "direncanakan",
-  "statusLabel": "Direncanakan",
-  "periode": "2026",
-  "gambar": "assets/images/hero/hero-bem.jpg",
-  "deskripsi": "Ajang kompetisi olahraga yang melibatkan mahasiswa Fakultas Ilmu Komputer.",
-  "tujuan": "Mewadahi dan mengembangkan minat serta bakat mahasiswa Fakultas Ilmu Komputer di bidang olahraga.",
-  "deskripsi_lengkap": "Pekan Olahraga Mahasiswa (POM) merupakan kegiatan kompetisi olahraga yang diselenggarakan untuk mewadahi minat dan bakat mahasiswa Fakultas Ilmu Komputer sekaligus mempererat kebersamaan dan sportivitas antar mahasiswa.",
-  "sasaran": [
-    "Mahasiswa Fakultas Ilmu Komputer"
-  ],
-  "output": [
-    "Terlaksananya kompetisi olahraga mahasiswa",
-    "Meningkatnya minat dan bakat mahasiswa di bidang olahraga",
-    "Terjalinnya kebersamaan dan sportivitas antar mahasiswa"
-  ],
-  "galeri": []
-},
+  {
+    "id": 3,
+    "nama": "Pekan Olahraga Mahasiswa (POM)",
+    "slug": "pom",
+    "icon": "ri-trophy-line",
+    "kategori": "Program Utama",
+    "divisi": "BEM FIK",
+    "status": "direncanakan",
+    "statusLabel": "Direncanakan",
+    "periode": "2026",
+    "gambar": "assets/images/hero/hero-bem.jpg",
+    "deskripsi": "Ajang kompetisi olahraga yang melibatkan mahasiswa Fakultas Ilmu Komputer.",
+    "tujuan": "Mewadahi dan mengembangkan minat serta bakat mahasiswa Fakultas Ilmu Komputer di bidang olahraga.",
+    "deskripsi_lengkap": "Pekan Olahraga Mahasiswa (POM) merupakan kegiatan kompetisi olahraga yang diselenggarakan untuk mewadahi minat dan bakat mahasiswa Fakultas Ilmu Komputer sekaligus mempererat kebersamaan dan sportivitas antar mahasiswa.",
+    "sasaran": [
+      "Mahasiswa Fakultas Ilmu Komputer"
+    ],
+    "output": [
+      "Terlaksananya kompetisi olahraga mahasiswa",
+      "Meningkatnya minat dan bakat mahasiswa di bidang olahraga",
+      "Terjalinnya kebersamaan dan sportivitas antar mahasiswa"
+    ],
+    "galeri": []
+  },
   {
     "id": 4,
     "nama": "Informasi dan Mading Digital",
@@ -198,5 +198,23 @@
       "Kegiatan sharing terlaksana dan memberikan wawasan kepada mahasiswa"
     ],
     "galeri": []
+  },
+  {
+    "nama": "test-proker",
+    "slug": "test-proker",
+    "icon": "ri-flag-line",
+    "kategori": "Program Utama",
+    "divisi": "Komunikasi dan Informasi",
+    "status": "direncanakan",
+    "statusLabel": "Direncanakan",
+    "periode": "2026",
+    "gambar": "",
+    "deskripsi": "",
+    "tujuan": "",
+    "deskripsi_lengkap": "",
+    "sasaran": [],
+    "output": [],
+    "galeri": [],
+    "id": 10
   }
 ]
