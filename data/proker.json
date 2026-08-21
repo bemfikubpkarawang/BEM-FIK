@@ -198,23 +198,5 @@
       "Kegiatan sharing terlaksana dan memberikan wawasan kepada mahasiswa"
     ],
     "galeri": []
-  },
-  {
-    "nama": "test-proker1",
-    "slug": "test-proker",
-    "icon": "ri-flag-line",
-    "kategori": "Program Utama",
-    "divisi": "Komunikasi dan Informasi",
-    "status": "direncanakan",
-    "statusLabel": "Direncanakan",
-    "periode": "2026",
-    "gambar": "",
-    "deskripsi": "",
-    "tujuan": "",
-    "deskripsi_lengkap": "",
-    "sasaran": [],
-    "output": [],
-    "galeri": [],
-    "id": 10
   }
 ]
