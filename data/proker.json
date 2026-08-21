@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "nama": "Inaugurasi",
+    "slug": "inaugurasi",
+    "icon": "ri-award-line",
+    "kategori": "Program Utama",
+    "divisi": "BEM FIK",
+    "status": "direncanakan",
+    "statusLabel": "Direncanakan",
+    "periode": "2026",
+    "gambar": "assets/images/hero/hero-bem.jpg",
+    "deskripsi": "Kegiatan pelantikan dan pengenalan kepengurusan Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer.",
+    "tujuan": "Memperkuat komitmen, solidaritas, dan semangat pengabdian seluruh pengurus.",
+    "deskripsi_lengkap": "Inaugurasi merupakan kegiatan pelantikan dan pengenalan kepengurusan BEM FIK sebagai awal dimulainya masa kepengurusan.",
+    "sasaran": [
+      "Seluruh Pengurus BEM FIK"
+    ],
+    "output": [
+      "Inaugurasi terlaksana secara resmi"
+    ],
+    "galeri": []
+  },
+  {
+    "id": 2,
+    "nama": "Seminar Nasional",
+    "slug": "seminar-nasional",
+    "icon": "ri-presentation-line",
+    "kategori": "Program Utama",
+    "divisi": "BEM FIK",
+    "status": "direncanakan",
+    "statusLabel": "Direncanakan",
+    "periode": "2026",
+    "gambar": "assets/images/hero/hero-bem.jpg",
+    "deskripsi": "Seminar nasional yang menghadirkan narasumber untuk memberikan wawasan dan pengetahuan kepada mahasiswa.",
+    "tujuan": "Menambah wawasan dan pengetahuan mahasiswa melalui kegiatan berskala nasional.",
+    "deskripsi_lengkap": "Seminar nasional merupakan kegiatan edukatif yang menghadirkan narasumber untuk membahas topik yang relevan dengan kebutuhan dan perkembangan mahasiswa.",
+    "sasaran": [
+      "Mahasiswa Fakultas Ilmu Komputer"
+    ],
+    "output": [
+      "Seminar nasional terlaksana dengan baik"
+    ],
+    "galeri": []
+  },
+{
+  "id": 3,
+  "nama": "Pekan Olahraga Mahasiswa (POM)",
+  "slug": "pom",
+  "icon": "ri-trophy-line",
+  "kategori": "Program Utama",
+  "divisi": "BEM FIK",
+  "status": "direncanakan",
+  "statusLabel": "Direncanakan",
+  "periode": "2026",
+  "gambar": "assets/images/hero/hero-bem.jpg",
+  "deskripsi": "Ajang kompetisi olahraga yang melibatkan mahasiswa Fakultas Ilmu Komputer.",
+  "tujuan": "Mewadahi dan mengembangkan minat serta bakat mahasiswa Fakultas Ilmu Komputer di bidang olahraga.",
+  "deskripsi_lengkap": "Pekan Olahraga Mahasiswa (POM) merupakan kegiatan kompetisi olahraga yang diselenggarakan untuk mewadahi minat dan bakat mahasiswa Fakultas Ilmu Komputer sekaligus mempererat kebersamaan dan sportivitas antar mahasiswa.",
+  "sasaran": [
+    "Mahasiswa Fakultas Ilmu Komputer"
+  ],
+  "output": [
+    "Terlaksananya kompetisi olahraga mahasiswa",
+    "Meningkatnya minat dan bakat mahasiswa di bidang olahraga",
+    "Terjalinnya kebersamaan dan sportivitas antar mahasiswa"
+  ],
+  "galeri": []
+},
+  {
+    "id": 4,
+    "nama": "Informasi dan Mading Digital",
+    "slug": "informasi-dan-mading-digital",
+    "icon": "ri-newspaper-line",
+    "kategori": "FIK Opportunity",
+    "divisi": "BEM FIK",
+    "status": "berjalan",
+    "statusLabel": "Sedang Berjalan",
+    "periode": "2026",
+    "gambar": "assets/images/about/about-banner.jpg",
+    "deskripsi": "Penyediaan dan penyebaran informasi akademik, non akademik, serta peluang pengembangan diri mahasiswa melalui media digital.",
+    "tujuan": "Mengoptimalkan akses mahasiswa terhadap informasi dan peluang pengembangan diri.",
+    "deskripsi_lengkap": "Informasi dan Mading Digital menjadi media penyebaran informasi akademik, non akademik, peluang pengembangan diri, serta informasi kemahasiswaan melalui media digital BEM FIK.",
+    "sasaran": [
+      "Mahasiswa Fakultas Ilmu Komputer"
+    ],
+    "output": [
+      "Informasi dan mading digital tersedia secara rutin dan informatif"
+    ],
+    "galeri": []
+  },
+  {
+    "id": 5,
+    "nama": "Kotak Aspirasi Online Website",
+    "slug": "kotak-aspirasi-online-website",
+    "icon": "ri-chat-voice-line",
+    "kategori": "Aspirasi FIK",
+    "divisi": "BEM FIK",
+    "status": "berjalan",
+    "statusLabel": "Sedang Berjalan",
+    "periode": "2026",
+    "gambar": "assets/images/about/about-banner.jpg",
+    "deskripsi": "Media penyampaian aspirasi mahasiswa melalui website secara terbuka dan terstruktur.",
+    "tujuan": "Menjadi wadah bagi mahasiswa untuk menyampaikan aspirasi, kritik, dan saran.",
+    "deskripsi_lengkap": "Kotak Aspirasi Online Website merupakan media bagi mahasiswa untuk menyampaikan aspirasi, kritik, dan saran secara mudah melalui website BEM FIK.",
+    "sasaran": [
+      "Mahasiswa Fakultas Ilmu Komputer"
+    ],
+    "output": [
+      "Aspirasi mahasiswa terdokumentasi dan dapat ditindaklanjuti"
+    ],
+    "galeri": []
+  },
+  {
+    "id": 6,
+    "nama": "Forum Dialog Mahasiswa",
+    "slug": "forum-dialog-mahasiswa",
+    "icon": "ri-discuss-line",
+    "kategori": "Aspirasi FIK",
+    "divisi": "BEM FIK",
+    "status": "direncanakan",
+    "statusLabel": "Direncanakan",
+    "periode": "2026",
+    "gambar": "assets/images/hero/hero-bem.jpg",
+    "deskripsi": "Forum dialog antara mahasiswa dan pihak fakultas untuk membahas aspirasi dan isu kemahasiswaan.",
+    "tujuan": "Menjembatani komunikasi antara mahasiswa dan fakultas.",
+    "deskripsi_lengkap": "Forum Dialog Mahasiswa menjadi ruang komunikasi terbuka untuk menyampaikan dan membahas berbagai aspirasi serta isu kemahasiswaan bersama pihak terkait.",
+    "sasaran": [
+      "Mahasiswa Fakultas Ilmu Komputer"
+    ],
+    "output": [
+      "Forum dialog terlaksana dan menghasilkan tindak lanjut"
+    ],
+    "galeri": []
+  },
+  {
+    "id": 7,
+    "nama": "Publikasi Tindak Lanjut Aspirasi",
+    "slug": "publikasi-tindak-lanjut-aspirasi",
+    "icon": "ri-file-list-3-line",
+    "kategori": "Aspirasi FIK",
+    "divisi": "BEM FIK",
+    "status": "direncanakan",
+    "statusLabel": "Direncanakan",
+    "periode": "2026",
+    "gambar": "assets/images/about/about-banner.jpg",
+    "deskripsi": "Publikasi perkembangan tindak lanjut aspirasi mahasiswa secara transparan.",
+    "tujuan": "Memberikan informasi kepada mahasiswa mengenai perkembangan aspirasi yang telah disampaikan.",
+    "deskripsi_lengkap": "Publikasi Tindak Lanjut Aspirasi merupakan bentuk transparansi BEM FIK dalam menyampaikan perkembangan penyelesaian aspirasi mahasiswa.",
+    "sasaran": [
+      "Mahasiswa Fakultas Ilmu Komputer"
+    ],
+    "output": [
+      "Perkembangan tindak lanjut aspirasi dapat diketahui mahasiswa"
+    ],
+    "galeri": []
+  },
+  {
+    "id": 8,
+    "nama": "Forum Koordinasi dan Kolaborasi Kegiatan antar BEM Fakultas se-UBP Karawang",
+    "slug": "forum-koordinasi-dan-kolaborasi-bem",
+    "icon": "ri-team-line",
+    "kategori": "FIK Connect",
+    "divisi": "BEM FIK",
+    "status": "direncanakan",
+    "statusLabel": "Direncanakan",
+    "periode": "2026",
+    "gambar": "assets/images/hero/hero-bem.jpg",
+    "deskripsi": "Forum koordinasi dan kolaborasi kegiatan antar BEM Fakultas se-UBP Karawang.",
+    "tujuan": "Memperkuat hubungan, koordinasi, dan kolaborasi antar organisasi mahasiswa di lingkungan UBP Karawang.",
+    "deskripsi_lengkap": "Forum ini menjadi wadah koordinasi dan kolaborasi kegiatan antar BEM Fakultas se-UBP Karawang untuk membangun sinergi dan kebersamaan antar organisasi mahasiswa.",
+    "sasaran": [
+      "BEM Fakultas se-UBP Karawang"
+    ],
+    "output": [
+      "Koordinasi dan kolaborasi antar BEM Fakultas terlaksana"
+    ],
+    "galeri": []
+  },
+  {
+    "id": 9,
+    "nama": "Sharing Bersama Kakak Tingkat",
+    "slug": "sharing-bersama-kakak-tingkat",
+    "icon": "ri-user-star-line",
+    "kategori": "FIK Connect",
+    "divisi": "BEM FIK",
+    "status": "direncanakan",
+    "statusLabel": "Direncanakan",
+    "periode": "2026",
+    "gambar": "assets/images/hero/hero-bem.jpg",
+    "deskripsi": "Kegiatan berbagi pengalaman dan wawasan bersama kakak tingkat.",
+    "tujuan": "Memberikan wawasan dan pengalaman kepada mahasiswa melalui interaksi dengan kakak tingkat.",
+    "deskripsi_lengkap": "Sharing Bersama Kakak Tingkat menjadi wadah berbagi pengalaman mengenai perkuliahan, organisasi, kegiatan mahasiswa, dan pengalaman lainnya yang dapat membantu mahasiswa.",
+    "sasaran": [
+      "Mahasiswa Fakultas Ilmu Komputer"
+    ],
+    "output": [
+      "Kegiatan sharing terlaksana dan memberikan wawasan kepada mahasiswa"
+    ],
+    "galeri": []
+  }
+]

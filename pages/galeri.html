@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Dokumentasi | BEM Fakultas Ilmu Komputer</title>
+    <meta name="description" content="Dokumentasi kegiatan, seminar, workshop, pengabdian masyarakat, dan program kerja Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer UBP Karawang.">
+    <meta name="keywords" content="Galeri BEM FIK, Foto Kegiatan BEM FIK, Dokumentasi BEM FIK">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
+
+    <link rel="icon" href="../assets/logo/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Header & Navbar -->
+    <header id="header"></header>
+
+    <main>
+        <!-- ================= HERO GALERI ================= -->
+        <section class="gallery-hero page-header">
+            <div class="container">
+                <div class="page-header-content text-center">
+                    <span class="page-badge">
+                        <i class="ri-image-2-line"></i> Dokumentasi Kegiatan
+                    </span>
+
+                    <h1>
+                        Galeri Dokumentasi BEM FIK
+                    </h1>
+
+                    <p>
+                        Dokumentasi berbagai momen berharga, agenda kegiatan, seminar, pelatihan, pengabdian, dan pelaksanaan program kerja BEM Fakultas Ilmu Komputer Periode 2026.
+                    </p>
+                </div>
+            </div>
+
+            <div class="page-blob blob-1"></div>
+            <div class="page-blob blob-2"></div>
+        </section>
+
+        <!-- ================= FILTER & SEARCH ================= -->
+        <section class="gallery-filter">
+            <div class="container">
+                <div class="gallery-toolbar">
+                    <div class="gallery-search">
+                        <i class="ri-search-line"></i>
+                        <input type="text" id="gallerySearch" placeholder="Cari foto dokumentasi..." aria-label="Cari dokumentasi">
+                    </div>
+
+                    <div class="gallery-filter-group">
+                        <button class="gallery-filter-btn active" data-filter="all">Semua</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALLERY SECTION ================= -->
+        <section class="gallery-section section">
+            <div class="container">
+                <div class="gallery-header">
+                    <div>
+                        <span class="section-subtitle">Arsip Dokumentasi</span>
+                        <h2>Momen Kegiatan Mahasiswa</h2>
+                        <p>Klik foto untuk melihat tampilan penuh (lightbox) dan rincian dokumentasi.</p>
+                    </div>
+
+                    <div class="gallery-count">
+                        <span id="galleryCount" class="badge-count">1 Dokumentasi</span>
+                    </div>
+                </div>
+
+                <div class="gallery-grid" id="galleryContainer">
+                    <!-- Diisi otomatis oleh galeri.js -->
+                </div>
+
+                <!-- Notice Status Dokumentasi Berkala -->
+                <div class="gallery-notice-card">
+                    <div class="notice-icon">
+                        <i class="ri-camera-lens-line"></i>
+                    </div>
+                    <div class="notice-text">
+                        <h4>Dokumentasi Diperbarui Secara Berkala</h4>
+                        <p>Foto dan dokumentasi kegiatan terbaru akan terus diunggah oleh Departemen KOMINFO seiring berlangsungnya program kerja BEM FIK periode 2026.</p>
+                    </div>
+                </div>
+
+                <!-- Empty State -->
+                <div class="gallery-empty" id="galleryEmpty" style="display:none;">
+                    <div class="empty-icon">
+                        <i class="ri-image-line"></i>
+                    </div>
+                    <h3>Dokumentasi Tidak Ditemukan</h3>
+                    <p>Coba gunakan kata kunci pencarian lain atau pilih filter kategori yang berbeda.</p>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="gallery-action">
+                    <button id="loadMoreGallery" class="btn btn-outline" style="display: none;">
+                        <i class="ri-add-line"></i> Muat Lebih Banyak
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= LIGHTBOX MODAL ================= -->
+        <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Tampilan Foto Dokumentasi">
+            <div class="lightbox-dialog">
+                <button class="lightbox-close" id="closeLightbox" aria-label="Tutup"><i class="ri-close-line"></i></button>
+                <button class="lightbox-prev" id="prevImage" aria-label="Foto Sebelumnya"><i class="ri-arrow-left-s-line"></i></button>
+                <button class="lightbox-next" id="nextImage" aria-label="Foto Selanjutnya"><i class="ri-arrow-right-s-line"></i></button>
+
+                <div class="lightbox-content">
+                    <div class="lightbox-image-wrapper">
+                        <img id="lightboxImage" src="" alt="Dokumentasi BEM FIK">
+                        <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+                    </div>
+                    <div class="lightbox-caption" id="lightboxCaption"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= CTA ================= -->
+        <section class="cta section">
+            <div class="container">
+                <div class="cta-box">
+                    <span class="section-subtitle">Publikasi & Dokumentasi</span>
+                    <h2>Punya Dokumentasi Kegiatan Bersama Kami?</h2>
+                    <p>
+                        Bagi mahasiswa atau organisasi yang ingin berbagi dokumentasi kegiatan kolaborasi bersama BEM FIK, silakan hubungi Departemen Komunikasi dan Informasi.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="kontak.html" class="btn btn-primary">
+                            <i class="ri-mail-line"></i> Hubungi KOMINFO
+                        </a>
+                        <a href="../index.html" class="btn btn-outline">
+                            <i class="ri-home-4-line"></i> Beranda
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="../js/data-loader.js"></script>
+    <script src="../js/galeri.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

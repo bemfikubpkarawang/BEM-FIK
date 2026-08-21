@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Informasi | BEM FIK</title>
+    <meta name="description" content="Baca rincian berita dan informasi resmi Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer UBP Karawang.">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
+
+    <link rel="icon" href="../assets/logo/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Header & Navbar -->
+    <header id="header"></header>
+
+    <main>
+        <!-- ================= BREADCRUMB ================= -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li><a href="../index.html"><i class="ri-home-4-line"></i> Beranda</a></li>
+                    <li><i class="ri-arrow-right-s-line"></i></li>
+                    <li><a href="informasi.html">Informasi</a></li>
+                    <li><i class="ri-arrow-right-s-line"></i></li>
+                    <li class="active">Rincian Berita</li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ================= HERO INFORMASI DETAIL ================= -->
+        <section class="page-header information-detail-hero">
+            <div class="container">
+                <div class="page-header-content text-center">
+                    <span class="page-badge" id="infoCategory">
+                        <i class="ri-newspaper-line"></i> Memuat Kategori...
+                    </span>
+
+                    <h1 id="infoTitle">
+                        Memuat Judul Informasi...
+                    </h1>
+
+                    <div class="detail-meta">
+                        <span>
+                            <i class="ri-calendar-line"></i>
+                            <span id="infoDate">-</span>
+                        </span>
+                        <span>
+                            <i class="ri-user-line"></i>
+                            <span id="infoAuthor">BEM FIK</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-blob blob-1"></div>
+            <div class="page-blob blob-2"></div>
+        </section>
+
+        <!-- ================= ARTICLE COVER & CONTENT ================= -->
+        <section class="section article-section">
+            <div class="container">
+                <div class="article-container">
+                    <div class="cover-image">
+                        <img id="infoImage" src="../assets/images/about/about-banner.jpg" alt="Cover Berita" onerror="handleImageError(this)">
+                    </div>
+
+                    <article class="article-content" id="infoContent">
+                        <p>Memuat isi berita...</p>
+                    </article>
+
+                    <!-- Tags -->
+                    <div class="article-tags-wrapper">
+                        <strong><i class="ri-price-tag-3-line"></i> Tags:</strong>
+                        <div class="tag-list" id="tagContainer">
+                            <!-- Diisi oleh detail.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DOKUMENTASI TAMBAHAN ================= -->
+        <section class="section information-gallery">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Dokumentasi</span>
+                    <h2>Galeri Liputan Kegiatan</h2>
+                    <p>Foto dokumentasi dari agenda terkait.</p>
+                </div>
+
+                <div id="galleryContainer" class="gallery-grid">
+                    <!-- Diisi oleh detail.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BERITA TERKAIT ================= -->
+        <section class="section related-information">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Rekomendasi</span>
+                    <h2>Berita & Informasi Lainnya</h2>
+                    <p>Simak juga kabar dan pengumuman terbaru lainnya.</p>
+                </div>
+
+                <div id="relatedContainer" class="information-grid">
+                    <!-- Diisi oleh detail.js -->
+                </div>
+
+                <div class="section-action">
+                    <a href="informasi.html" class="btn btn-outline">
+                        <i class="ri-arrow-left-line"></i> Semua Informasi
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="../js/data-loader.js"></script>
+    <script src="../js/detail.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "judul": "Open Recruitment Panitia POM 2026",
+    "slug": "open-recruitment-panitia-pom-2026",
+    "kategori": "Pengumuman",
+    "tanggal": "2026-08-17",
+    "penulis": "KOMINFO",
+    "thumbnail": "assets/images/informasi/oprec.jpg",
+    "gambar": [
+      "assets/images/informasi/oprec.jpg"
+    ],
+    "ringkasan": "Pendaftaran Panitia POM 2026 Fakultas Ilmu Komputer resmi dibuka untuk seluruh mahasiswa aktif.",
+    "deskripsi": "OPEN RECRUITMENT PANITIA PEKAN OLAHRAGA MAHASISWA (POM)\n\nSaatnya jadi bagian dari event olahraga terbesar dan paling seru di kampus.\n\nPekan Olahraga Mahasiswa (POM) 2026 membuka kesempatan bagi kalian yang ingin menjadi bagian dari kepanitiaan.\n\n✨ Benefit:\n- SKPI / E-Certificate / Sertifikat Kepanitiaan\n- Pengalaman organisasi & kepanitiaan\n- Relasi lintas angkatan\n- Mengasah leadership, komunikasi, dan teamwork\n\n📋 Daftar sekarang:\nhttps://forms.gle/JdM4u6cCfZyZQa1P9\n\nJangan lewatkan kesempatan untuk menjadi bagian dari kesuksesan POM 2026!",
+    "tags": [
+      "Open Recruitment",
+      "POM 2026",
+      "Kepanitiaan"
+    ],
+    "status": "publish"
+  },
+  {
+    "id": 2,
+    "judul": "Pelantikan BEM & BLM Fakultas Ilmu Komputer",
+    "slug": "pelantikan-bem-blm-fakultas-ilmu-komputer",
+    "kategori": "Kegiatan",
+    "tanggal": "2026-07-22",
+    "penulis": "BEM FIK",
+    "thumbnail": "assets/images/informasi/pelantikan.jpg",
+    "gambar": [
+      "assets/images/informasi/pelantikan.jpg"
+    ],
+    "ringkasan": "Pelantikan BEM & BLM Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang Periode 2026.",
+    "deskripsi": "Pelantikan BEM & BLM Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang Periode 2026.",
+    "tags": [
+      "Pelantikan",
+      "BEM FIK",
+      "BLM",
+      "Fakultas Ilmu Komputer"
+    ],
+    "status": "publish"
+  }
+]
