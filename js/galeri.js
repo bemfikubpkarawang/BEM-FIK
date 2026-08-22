@@ -95,27 +95,84 @@ function renderGallery() {
 
 function createAlbumCard(item, index) {
     const images = getAlbumImages(item);
-    const thumb = item.thumbnail || images[0];
+
+    const thumb =
+        item.thumbnail ||
+        images[0] ||
+        "";
+
     const thumbSrc = resolveImagePath(thumb);
+
+    const fallbackSrc =
+        images.length > 0
+            ? resolveImagePath(images[0])
+            : `${BASE_PATH}assets/images/no-image.png`;
+
     const count = images.length;
-    const formattedDate = formatDate(item.tanggal);
+
+    const formattedDate =
+        formatDate(item.tanggal);
 
     return `
-        <div class="gallery-card album-card" data-id="${item.id}" data-index="${index}" role="button" tabindex="0" aria-label="Buka Album ${item.judul}">
+        <div
+            class="gallery-card album-card"
+            data-id="${item.id}"
+            data-index="${index}"
+            role="button"
+            tabindex="0"
+            aria-label="Buka Album ${item.judul}"
+        >
+
             <div class="gallery-image album-cover">
-                <img src="${thumbSrc}" alt="${item.judul}" loading="lazy" onerror="handleImageError(this)">
+
+                <img
+                    src="${thumbSrc}"
+                    alt="${item.judul}"
+                    loading="lazy"
+                    onerror="
+                        if (!this.dataset.fallback) {
+                            this.dataset.fallback = 'true';
+                            this.src = '${fallbackSrc}';
+                        } else {
+                            this.onerror = null;
+                            this.src = '${BASE_PATH}assets/images/no-image.png';
+                        }
+                    "
+                >
+
                 <div class="album-badge">
-                    <i class="ri-image-line"></i> ${count} Foto
+                    <i class="ri-image-line"></i>
+                    ${count} Foto
                 </div>
+
                 <div class="gallery-overlay">
-                    <span class="gallery-category">${item.kategori || 'Kegiatan'}</span>
-                    <h3>${item.judul}</h3>
+
+                    <span class="gallery-category">
+                        ${item.kategori || "Kegiatan"}
+                    </span>
+
+                    <h3>
+                        ${item.judul}
+                    </h3>
+
                     <p>
-                        <span><i class="ri-calendar-line"></i> ${formattedDate}</span>
-                        <span class="album-action-text">Buka Album <i class="ri-arrow-right-line"></i></span>
+
+                        <span>
+                            <i class="ri-calendar-line"></i>
+                            ${formattedDate}
+                        </span>
+
+                        <span class="album-action-text">
+                            Buka Album
+                            <i class="ri-arrow-right-line"></i>
+                        </span>
+
                     </p>
+
                 </div>
+
             </div>
+
         </div>
     `;
 }
