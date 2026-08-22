@@ -218,45 +218,167 @@ function renderInformation() {
 
     if (filteredData.length === 0) {
         informationContainer.innerHTML = `
-            <div class="empty-state" style="grid-column: 1/-1;">
-                <h3>Informasi tidak ditemukan</h3>
-                <p>Coba gunakan kata kunci pencarian lain.</p>
+            <div
+                class="empty-state"
+                style="grid-column: 1/-1;"
+            >
+                <h3>
+                    Informasi tidak ditemukan
+                </h3>
+
+                <p>
+                    Coba gunakan kata kunci
+                    pencarian lain.
+                </p>
             </div>
         `;
+
         return;
     }
 
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    const pageData = filteredData.slice(start, end);
+    const start =
+        (currentPage - 1) * itemsPerPage;
 
-    informationContainer.innerHTML = pageData.map(item => {
-        const imgSrc = `${BASE_PATH}${item.thumbnail || (Array.isArray(item.gambar) ? item.gambar[0] : item.gambar)}`;
+    const end =
+        start + itemsPerPage;
 
-        return `
-        <article class="news-card">
-            <div class="news-image">
-                <img
-                    src="${imgSrc}"
-                    alt="${item.judul}"
-                    loading="lazy"
-                    onerror="handleImageError(this)">
-                <span class="news-category">${item.kategori || 'Berita'}</span>
-            </div>
-            <div class="news-content">
-                <div class="news-meta">
-                    <span><i class="ri-calendar-line"></i> ${formatDate(item.tanggal)}</span>
-                    <span><i class="ri-user-line"></i> ${item.penulis || 'BEM FIK'}</span>
-                </div>
-                <h3>${item.judul}</h3>
-                <p>${item.ringkasan.length > 115 ? item.ringkasan.substring(0, 115) + '...' : item.ringkasan}</p>
-                <a href="informasi-detail.html?slug=${item.slug}" class="news-link">
-                    Baca Selengkapnya <i class="ri-arrow-right-line"></i>
-                </a>
-            </div>
-        </article>
-        `;
-    }).join("");
+    const pageData =
+        filteredData.slice(start, end);
+
+    informationContainer.innerHTML =
+        pageData.map(item => {
+
+            const images =
+                Array.isArray(item.gambar)
+                    ? item.gambar
+                    : item.gambar
+                        ? [item.gambar]
+                        : [];
+
+            const thumbnail =
+                item.thumbnail ||
+                images[0] ||
+                "";
+
+            const imgSrc =
+                resolveInformationImagePath(
+                    thumbnail
+                );
+
+            const fallbackSrc =
+                images.length > 0
+                    ? resolveInformationImagePath(
+                        images[0]
+                    )
+                    : `${BASE_PATH}assets/images/no-image.png`;
+
+            const ringkasan =
+                item.ringkasan || "";
+
+            return `
+                <article class="news-card">
+
+                    <div class="news-image">
+
+                        <img
+                            src="${imgSrc}"
+                            alt="${item.judul}"
+                            loading="lazy"
+                            data-fallback-src="${fallbackSrc}"
+                            onerror="handleInformationImageError(this)"
+                        >
+
+                        <span class="news-category">
+                            ${item.kategori || "Berita"}
+                        </span>
+
+                    </div>
+
+                    <div class="news-content">
+
+                        <div class="news-meta">
+
+                            <span>
+                                <i class="ri-calendar-line"></i>
+                                ${formatDate(item.tanggal)}
+                            </span>
+
+                            <span>
+                                <i class="ri-user-line"></i>
+                                ${item.penulis || "BEM FIK"}
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            ${item.judul}
+                        </h3>
+
+                        <p>
+                            ${
+                                ringkasan.length > 115
+                                    ? ringkasan.substring(0, 115) + "..."
+                                    : ringkasan
+                            }
+                        </p>
+
+                        <a
+                            href="informasi-detail.html?slug=${item.slug}"
+                            class="news-link"
+                        >
+                            Baca Selengkapnya
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+            `;
+        }).join("");
+}
+
+/* =====================================================
+   IMAGE HELPER INFORMASI
+===================================================== */
+
+function resolveInformationImagePath(pathStr) {
+
+    if (!pathStr) {
+        return `${BASE_PATH}assets/images/no-image.png`;
+    }
+
+    if (
+        pathStr.startsWith("http://") ||
+        pathStr.startsWith("https://") ||
+        pathStr.startsWith("/")
+    ) {
+        return pathStr;
+    }
+
+    return `${BASE_PATH}${pathStr}`;
+}
+
+
+function handleInformationImageError(img) {
+
+    if (!img) return;
+
+    const fallback =
+        img.dataset.fallbackSrc;
+
+    if (
+        fallback &&
+        img.dataset.fallbackUsed !== "true"
+    ) {
+        img.dataset.fallbackUsed = "true";
+        img.src = fallback;
+        return;
+    }
+
+    img.onerror = null;
+
+    img.src =
+        `${BASE_PATH}assets/images/no-image.png`;
 }
 
 /* =====================================================
