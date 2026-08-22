@@ -113,37 +113,98 @@ function renderFeatured() {
     if (filteredData.length === 0) {
         featuredContainer.innerHTML = `
             <div class="empty-state" style="grid-column: 1/-1;">
-                <i class="ri-search-line" style="font-size: 32px; color: var(--primary); margin-bottom: 12px; display: block;"></i>
+                <i
+                    class="ri-search-line"
+                    style="font-size: 32px; color: var(--primary); margin-bottom: 12px; display: block;"
+                ></i>
+
                 <h3>Tidak ada informasi ditemukan</h3>
-                <p>Coba gunakan kata kunci pencarian atau kategori yang berbeda.</p>
+
+                <p>
+                    Coba gunakan kata kunci pencarian
+                    atau kategori yang berbeda.
+                </p>
             </div>
         `;
+
         return;
     }
 
     const item = filteredData[0];
-    const imgSrc = `${BASE_PATH}${item.thumbnail || (Array.isArray(item.gambar) ? item.gambar[0] : item.gambar)}`;
+
+    const images =
+        Array.isArray(item.gambar)
+            ? item.gambar
+            : item.gambar
+                ? [item.gambar]
+                : [];
+
+    const thumbnail =
+        item.thumbnail ||
+        images[0] ||
+        "";
+
+    const imgSrc =
+        resolveInformationImagePath(thumbnail);
+
+    const fallbackSrc =
+        images.length > 0
+            ? resolveInformationImagePath(images[0])
+            : `${BASE_PATH}assets/images/no-image.png`;
 
     featuredContainer.innerHTML = `
         <div class="featured-card">
+
             <div class="featured-image">
+
                 <img
                     src="${imgSrc}"
                     alt="${item.judul}"
-                    onerror="handleImageError(this)">
-                <span class="featured-category">${item.kategori || 'Highlight'}</span>
+                    loading="lazy"
+                    data-fallback-src="${fallbackSrc}"
+                    onerror="handleInformationImageError(this)"
+                >
+
+                <span class="featured-category">
+                    ${item.kategori || "Highlight"}
+                </span>
+
             </div>
+
             <div class="featured-content">
+
                 <div class="featured-meta">
-                    <span><i class="ri-calendar-line"></i> ${formatDate(item.tanggal)}</span>
-                    <span><i class="ri-user-line"></i> ${item.penulis || 'BEM FIK'}</span>
+
+                    <span>
+                        <i class="ri-calendar-line"></i>
+                        ${formatDate(item.tanggal)}
+                    </span>
+
+                    <span>
+                        <i class="ri-user-line"></i>
+                        ${item.penulis || "BEM FIK"}
+                    </span>
+
                 </div>
-                <h2>${item.judul}</h2>
-                <p>${item.ringkasan}</p>
-                <a href="informasi-detail.html?slug=${item.slug}" class="btn btn-primary">
-                    Baca Selengkapnya <i class="ri-arrow-right-line"></i>
+
+                <h2>
+                    ${item.judul}
+                </h2>
+
+                <p>
+                    ${item.ringkasan || ""}
+                </p>
+
+                <a
+                    href="informasi-detail.html?slug=${item.slug}"
+                    class="btn btn-primary"
+                >
+                    Baca Selengkapnya
+                    <i class="ri-arrow-right-line"></i>
                 </a>
+
             </div>
+
         </div>
     `;
 }
