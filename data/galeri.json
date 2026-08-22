@@ -17,8 +17,12 @@
     "judul": "uji-coba",
     "kategori": "Lainnya",
     "tanggal": "2026-07-22",
-    "thumbnail": "",
-    "gambar": [],
+    "thumbnail": "assets/images/admin/1787414965202-3wkots-screenshot-2025-09-13-095335.png",
+    "gambar": [
+      "assets/images/admin/1787414965202-3wkots-screenshot-2025-09-13-095335.png",
+      "assets/images/admin/1787414971607-kpe6py-screenshot-2025-09-13-095457.png",
+      "assets/images/admin/1787414975105-myr4h3-screenshot-2025-09-13-095529.png"
+    ],
     "deskripsi": "anime angst",
     "id": 2
   }
