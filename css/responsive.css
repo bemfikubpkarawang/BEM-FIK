@@ -540,18 +540,37 @@
         width: 100%;
     }
 
-    .filter-group,
-    .gallery-filter-group {
-        overflow-x: auto;
-        padding-bottom: 6px;
-        flex-wrap: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
+/* =====================================================
+   FILTER INFORMASI - MOBILE
+===================================================== */
 
-    .filter-btn,
-    .gallery-filter-btn {
-        white-space: nowrap;
-    }
+.filter-group {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    overflow: visible;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+
+.filter-group .filter-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+/* Gallery tetap boleh horizontal kalau memang dibutuhkan */
+.gallery-filter-group {
+    overflow-x: auto;
+    padding-bottom: 6px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.gallery-filter-btn {
+    white-space: nowrap;
+}
 
     #mapContainer iframe {
         height: 280px;
@@ -715,5 +734,52 @@
 
     .management-division {
         font-size: 0.72rem;
+    }
+}
+
+/* =====================================================
+   INFORMASI - CEGAH HORIZONTAL OVERFLOW DI HP
+===================================================== */
+
+@media (max-width: 576px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .information-grid,
+    .news-grid,
+    .featured-card,
+    .filter-wrapper,
+    .filter-card {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .filter-wrapper,
+    .filter-card {
+        width: 100%;
+    }
+
+    .filter-group {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        overflow: visible;
+    }
+
+    .filter-btn {
+        max-width: 100%;
+    }
+
+    /* Search tetap satu baris penuh */
+    .filter-wrapper input,
+    .filter-wrapper .search-input,
+    .filter-wrapper .search-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
