@@ -39,5 +39,20 @@
       "Fakultas Ilmu Komputer"
     ],
     "status": "publish"
+  },
+  {
+    "judul": "Test-Admin",
+    "slug": "test-admin",
+    "kategori": "Berita",
+    "tanggal": "2026-08-22",
+    "penulis": "BEM FIK",
+    "status": "publish",
+    "thumbnail": "",
+    "ringkasan": "anime angst",
+    "deskripsi": "salah satu anime angst",
+    "tags": [
+      "#anime"
+    ],
+    "id": 3
   }
 ]
