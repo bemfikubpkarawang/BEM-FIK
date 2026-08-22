@@ -14,12 +14,17 @@
     "deskripsi": "Dokumentasi kegiatan Pelantikan Pengurus BEM & BLM Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang Periode 2026."
   },
   {
-    "judul": "Test-Admin",
+    "judul": "Pelantikan BEM & BLM Fakultas Ilmu Komputer",
     "kategori": "Kegiatan",
-    "tanggal": "2026-08-22",
-    "thumbnail": "",
-    "gambar": [],
-    "deskripsi": "",
+    "tanggal": "2026-07-22",
+    "thumbnail": "assets/images/informasi/anime.jpg",
+    "gambar": [
+      "assets/images/informasi/anime.jpg",
+      "assets/images/admin/1787412112791-iy78o4-screenshot-2025-09-13-095335.png",
+      "assets/images/admin/1787412124083-30ba6h-screenshot-2025-09-13-095457.png",
+      "assets/images/admin/1787412129666-707nm1-screenshot-2025-09-13-095529.png"
+    ],
+    "deskripsi": "anime angst",
     "id": 2
   }
 ]
