@@ -12,5 +12,16 @@
       "assets/images/galeri/oprec-2-3.jpg"
     ],
     "deskripsi": "Dokumentasi kegiatan Pelantikan Pengurus BEM & BLM Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang Periode 2026."
+  },
+  {
+    "judul": "Rapat BEM",
+    "kategori": "Dokumentasi",
+    "tanggal": "2026-08-25",
+    "thumbnail": "assets/images/admin/1787646069004-yvp6wa-1000183402.jpg",
+    "gambar": [
+      "assets/images/admin/1787646069004-yvp6wa-1000183402.jpg"
+    ],
+    "deskripsi": "Dokumentasi Rapat BEM",
+    "id": 2
   }
 ]
