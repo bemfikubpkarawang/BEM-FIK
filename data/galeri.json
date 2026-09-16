@@ -28,5 +28,22 @@
     ],
     "deskripsi": "Dokumentasi kegiatan PKKMB Fakultas Ilmu Komputer Day 2 yang berlangsung dengan berbagai rangkaian kegiatan untuk memperkenalkan lingkungan fakultas, membangun kebersamaan, serta memberikan pengalaman bagi mahasiswa baru.",
     "id": 2
+  },
+  {
+    "judul": "PKKMB Day 3",
+    "kategori": "PKKMB",
+    "tanggal": "2026-09-06",
+    "thumbnail": "assets/images/admin/1789569466114-5qmn44-dsc0567.jpg",
+    "gambar": [
+      "assets/images/admin/1789569477576-518tly-dsc0392.jpg",
+      "assets/images/admin/1789569484859-v4v4r8-dsc0411.jpg",
+      "assets/images/admin/1789569491385-2xdiyy-dsc0412.jpg",
+      "assets/images/admin/1789569497495-hx4sf3-dsc0437.jpg",
+      "assets/images/admin/1789569513005-pnxgna-dsc0492.jpg",
+      "assets/images/admin/1789569519253-9emkiz-dsc0503.jpg",
+      "assets/images/admin/1789569525358-zlw94s-dsc0512.jpg"
+    ],
+    "deskripsi": "Dokumentasi kegiatan PKKMB Fakultas Ilmu Komputer Day 3 yang menjadi bagian dari rangkaian pengenalan dan pembekalan mahasiswa baru, sekaligus mempererat kebersamaan antara mahasiswa baru dan keluarga besar Fakultas Ilmu Komputer.",
+    "id": 3
   }
 ]
