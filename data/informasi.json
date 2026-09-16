@@ -39,5 +39,26 @@
       "Fakultas Ilmu Komputer"
     ],
     "status": "publish"
+  },
+  {
+    "judul": "Open Registrasi Peserta POM",
+    "slug": "open-registrasi-peserta-pom",
+    "kategori": "Berita",
+    "tanggal": "2026-09-06",
+    "penulis": "BEM FIK",
+    "status": "publish",
+    "thumbnail": "",
+    "ringkasan": "Pekan Olahraga Mahasiswa merupakan ajang kompetisi olahraga dan esports yang diselenggarakan untuk mempererat kebersamaan serta menjunjung tinggi sportivitas mahasiswa.",
+    "deskripsi": "🚨 OPEN REGISTRATION POM 🚨\n\nSaatnya tunjukkan kemampuan terbaikmu! 💪🔥\n\n🏸 Badminton Ganda Putra\n🎮 Mobile Legends\n\nBebaskan dirimu untuk bertanding dan membentuk tim terbaikmu! 👊\nPeserta dapat berasal dari fakultas yang berbeda, jadi kamu bisa ajak teman-temanmu dari fakultas lain untuk ikut bertanding bersama.\n\nSiapkan strategi terbaik, bangun kekompakan tim, dan buktikan kemampuanmu di ajang POM! 🏆🔥\n\n📌 Segera daftarkan timmu sebelum kuota penuh!",
+    "tags": [
+      "POM",
+      "Pekan Olahraga Mahasiswa",
+      "Badminton",
+      "Mobile Legends",
+      "BEM FIK",
+      "Olahraga",
+      "Esports"
+    ],
+    "id": 3
   }
 ]
