@@ -150,7 +150,7 @@ const FALLBACK_DIVISI = [
   {
     "id": 2,
     "nama": "Minat dan Bakat",
-    "singkatan": "MINBA",
+    "singkatan": "",
     "logo": "assets/images/divisi/minba.png",
     "icon": "fas fa-medal",
     "warna": "#EC4899",
@@ -443,7 +443,7 @@ const FALLBACK_PROKER = [
     "slug": "pom",
     "icon": "ri-trophy-line",
     "kategori": "Program Utama",
-    "divisi": "MINBA",
+    "divisi": "BEM FIK",
     "status": "direncanakan",
     "statusLabel": "Direncanakan",
     "periode": "2026",

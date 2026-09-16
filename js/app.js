@@ -95,7 +95,6 @@ const BEMApp = {
                     <li><a class="nav-link" href="${BASE_PATH}pages/pengurus.html">Pengurus</a></li>
                     <li><a class="nav-link" href="${BASE_PATH}pages/informasi.html">Informasi</a></li>
                     <li><a class="nav-link" href="${BASE_PATH}pages/galeri.html">Galeri</a></li>
-                    <li><a class="nav-link" href="${BASE_PATH}pages/aspirasi.html">Aspirasi</a></li>
                     <li><a class="nav-link" href="${BASE_PATH}pages/kontak.html">Kontak</a></li>
                 </ul>
             </div>
