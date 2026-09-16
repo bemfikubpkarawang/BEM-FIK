@@ -2,211 +2,160 @@
 <html lang="id">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susunan Pengurus | BEM Fakultas Ilmu Komputer</title>
+    <meta name="description" content="Susunan pengurus Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang Periode 2026.">
+    <meta name="keywords" content="Pengurus BEM FIK, Struktur Organisasi BEM FIK, Pimpinan BEM FIK, UBP Karawang">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
 
-    <title>Pengurus BEM Fakultas Ilmu Komputer</title>
+    <link rel="icon" href="../assets/logo/logo.png">
 
-    <link rel="icon" href="../assets/images/logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Header & Navbar -->
     <header id="header"></header>
 
-    <!-- =========================
-         HERO
-    ========================== -->
-    <header class="pengurus-hero">
+    <main>
+        <!-- ================= HERO PENGURUS ================= -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-grid">
+                    <div class="page-header-content">
+                        <span class="page-badge">
+                            <i class="ri-team-line"></i> Struktur Kepengurusan
+                        </span>
 
-        <div class="container">
+                        <h1>
+                            Pengurus BEM FIK Periode 2026
+                        </h1>
 
-            <a href="../index.html" class="back-button">
+                        <p>
+                            Mengenal jajaran mahasiswa yang berdedikasi mengabdi dan menjalankan roda organisasi Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang.
+                        </p>
 
-                <i class="ri-arrow-left-line"></i>
+                        <div class="page-action">
+                            <a href="#pimpinan" class="btn btn-primary">
+                                <i class="ri-user-star-line"></i> Pimpinan BEM
+                            </a>
+                            <a href="divisi.html" class="btn btn-outline">
+                                <i class="ri-git-merge-line"></i> Struktur Divisi
+                            </a>
+                        </div>
+                    </div>
 
-                <span>Kembali ke Beranda</span>
-
-            </a>
-
-            <div class="pengurus-hero-content">
-
-                <div class="pengurus-hero-text">
-
-                    <span class="pengurus-hero-badge">
-
-                        Struktur Organisasi
-
-                    </span>
-
-                    <h1>
-
-                        Pengurus
-                        <br>
-                        BEM Fakultas Ilmu Komputer
-
-                    </h1>
-
-                    <p>
-
-                        Mengenal seluruh pengurus yang berperan
-                        dalam menjalankan roda organisasi
-                        Badan Eksekutif Mahasiswa
-                        Fakultas Ilmu Komputer.
-
-                    </p>
-
+                    <div class="page-header-image">
+                        <img src="../assets/images/about/about-banner.jpg" alt="Pengurus BEM FIK" onerror="handleImageError(this)">
+                    </div>
                 </div>
-
-                <div class="pengurus-hero-image">
-
-                    <img src="../assets/images/logo.png" alt="Logo BEM">
-
-                </div>
-
             </div>
 
-        </div>
+            <div class="page-blob blob-1"></div>
+            <div class="page-blob blob-2"></div>
+        </section>
 
-    </header>
-
-    <main>
-
-        <!-- =========================
-             PIMPINAN
-        ========================== -->
-
-        <section class="pengurus-section">
-
+        <!-- ================= PIMPINAN INTI (BPH) ================= -->
+        <section class="pengurus-section section" id="pimpinan">
             <div class="container">
-
                 <div class="section-title">
-
-                    <span>PIMPINAN</span>
-
-                    <h2>Struktur Pimpinan</h2>
-
+                    <span class="section-subtitle">Badan Pengurus Harian</span>
+                    <h2>Pimpinan Utama Organisasi</h2>
+                    <p>Ketua, Wakil Ketua, Sekretaris, dan Bendahara BEM Fakultas Ilmu Komputer.</p>
                 </div>
 
                 <div id="leaderContainer" class="pengurus-grid">
-
+                    <!-- Render otomatis oleh pengurus.js -->
                 </div>
-
             </div>
-
         </section>
 
-        <!-- =========================
-             PSDM
-        ========================== -->
-
-        <section class="pengurus-section">
-
+        <!-- ================= DEPARTEMEN PSDM ================= -->
+        <section class="pengurus-section section" id="psdm">
             <div class="container">
-
                 <div class="section-title">
-
-                    <span>DIVISI</span>
-
-                    <h2>Pengembangan Sumber Daya Mahasiswa</h2>
-
+                    <span class="section-subtitle">Departemen Kaderisasi</span>
+                    <h2>Pengembangan Sumber Daya Mahasiswa (PSDM)</h2>
+                    <p>Fokus pada pembinaan karakter, pelatihan soft skills, dan kaderisasi kepemimpinan mahasiswa.</p>
                 </div>
 
                 <div id="psdmContainer" class="pengurus-grid">
-
+                    <!-- Render otomatis oleh pengurus.js -->
                 </div>
-
             </div>
-
         </section>
 
-        <!-- =========================
-             SOSPOL
-        ========================== -->
-
-        <section class="pengurus-section">
-
+        <!-- ================= DEPARTEMEN SOSPOL ================= -->
+        <section class="pengurus-section section" id="sospol">
             <div class="container">
-
                 <div class="section-title">
-
-                    <h2>Sosial dan Politik</h2>
-
+                    <span class="section-subtitle">Departemen Pergerakan & Advokasi</span>
+                    <h2>Sosial dan Politik (SOSPOL)</h2>
+                    <p>Fokus pada kajian kebijakan, advokasi aspirasi mahasiswa, sosialisasi, dan jejaring relasi.</p>
                 </div>
 
                 <div id="sospolContainer" class="pengurus-grid">
-
+                    <!-- Render otomatis oleh pengurus.js -->
                 </div>
-
             </div>
-
         </section>
 
-        <!-- =========================
-             MINBA
-        ========================== -->
-
-        <section class="pengurus-section">
-
+        <!-- ================= DEPARTEMEN MINBA ================= -->
+        <section class="pengurus-section section" id="minba">
             <div class="container">
-
                 <div class="section-title">
-
-                    <h2>Minat dan Bakat</h2>
-
+                    <span class="section-subtitle">Departemen Bakat & Prestasi</span>
+                    <h2>Minat dan Bakat (MINBA)</h2>
+                    <p>Fasilitator pengembangan potensi mahasiswa di bidang olahraga, seni, kreativitas, dan kompetisi.</p>
                 </div>
 
                 <div id="minbaContainer" class="pengurus-grid">
-
+                    <!-- Render otomatis oleh pengurus.js -->
                 </div>
-
             </div>
-
         </section>
 
-        <!-- =========================
-             KOMINFO
-        ========================== -->
-
-        <section class="pengurus-section">
-
+        <!-- ================= DEPARTEMEN KOMINFO ================= -->
+        <section class="pengurus-section section" id="kominfo">
             <div class="container">
-
                 <div class="section-title">
-
-                    <h2>Komunikasi dan Informasi</h2>
-
+                    <span class="section-subtitle">Departemen Media & Informasi</span>
+                    <h2>Komunikasi dan Informasi (KOMINFO)</h2>
+                    <p>Pengelola media komunikasi, branding publikasi digital, website, dan dokumentasi resmi organisasi.</p>
                 </div>
 
                 <div id="kominfoContainer" class="pengurus-grid">
-
+                    <!-- Render otomatis oleh pengurus.js -->
                 </div>
-
             </div>
-
         </section>
 
-    </main>
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- Footer -->
     <footer id="footer"></footer>
 
+    <!-- Scripts -->
     <script src="../js/data-loader.js"></script>
-    <script src="../js/app.js"></script>
     <script src="../js/pengurus.js"></script>
     <script src="../js/animation.js"></script>
-
+    <script src="../js/app.js"></script>
 </body>
 
 </html>

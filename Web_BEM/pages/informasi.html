@@ -2,279 +2,153 @@
 <html lang="id">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Informasi | BEM Fakultas Ilmu Komputer</title>
+    <meta name="description" content="Kumpulan berita terbaru, pengumuman, seminar, workshop, dan agenda kegiatan BEM Fakultas Ilmu Komputer UBP Karawang.">
+    <meta name="keywords" content="Berita BEM FIK, Informasi BEM FIK, Pengumuman BEM FIK, Kegiatan FIK UBP">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
 
-    <title>Informasi | BEM Fakultas Ilmu Komputer</title>
+    <link rel="icon" href="../assets/logo/logo.png">
 
-    <link rel="icon" href="../assets/images/logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
-
     <link rel="stylesheet" href="../css/responsive.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 </head>
 
 <body>
 
-    <!-- =========================
-        LOADER
-    ========================== -->
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
 
-    <div class="loader">
-
-        <div class="spinner"></div>
-
-    </div>
-
-    <!-- =========================
-        NAVBAR
-    ========================== -->
-
+    <!-- Header & Navbar -->
     <header id="header"></header>
 
     <main>
-
-        <!-- =========================
-            HERO
-        ========================== -->
-
-        <section class="information-hero">
-
+        <!-- ================= HERO INFORMASI ================= -->
+        <section class="page-header">
             <div class="container">
+                <div class="page-header-grid">
+                    <div class="page-header-content">
+                        <span class="page-badge">
+                            <i class="ri-newspaper-line"></i> Kabar & Pengumuman
+                        </span>
 
-                <span class="hero-badge">
+                        <h1>
+                            Berita & Informasi BEM FIK
+                        </h1>
 
-                    <i class="ri-newspaper-line"></i>
+                        <p>
+                            Pusat informasi resmi seputar kegiatan kemahasiswaan, pengumuman akademik dan non-akademik, seminar, workshop, serta prestasi mahasiswa Fakultas Ilmu Komputer.
+                        </p>
+                    </div>
 
-                    Informasi BEM
-
-                </span>
-
-                <h1>
-
-                    Berita &
-                    Informasi
-                    BEM Fakultas
-                    Ilmu Komputer
-
-                </h1>
-
-                <p>
-
-                    Temukan berbagai informasi terbaru,
-                    pengumuman, agenda kegiatan,
-                    prestasi mahasiswa, hingga
-                    dokumentasi aktivitas Badan
-                    Eksekutif Mahasiswa Fakultas
-                    Ilmu Komputer.
-
-                </p>
-
+                    <div class="page-header-image">
+                        <img src="../assets/images/about/about-banner.jpg" alt="Informasi BEM FIK" onerror="handleImageError(this)">
+                    </div>
+                </div>
             </div>
 
+            <div class="page-blob blob-1"></div>
+            <div class="page-blob blob-2"></div>
         </section>
 
-        <!-- =========================
-            SEARCH & FILTER
-        ========================== -->
-
+        <!-- ================= SEARCH & FILTER ================= -->
         <section class="information-filter">
-
             <div class="container">
-
                 <div class="filter-card">
-
                     <div class="search-box">
-
                         <i class="ri-search-line"></i>
-
-                        <input type="text" id="searchInput" placeholder="Cari informasi...">
-
+                        <input type="text" id="searchInput" placeholder="Cari judul berita, topik, kata kunci..." aria-label="Cari informasi">
                     </div>
 
                     <div class="filter-group">
-                        <button class="filter-btn active" data-category="">
-                            Semua
-                        </button>
-
-                        <button class="filter-btn" data-category="Pengumuman">
-                            Pengumuman
-                        </button>
-
-                        <button class="filter-btn" data-category="Kegiatan">
-                            Kegiatan
-                        </button>
-
-                        <button class="filter-btn" data-category="Pelatihan">
-                            Pelatihan
-                        </button>
-
-                        <button class="filter-btn" data-category="Event">
-                            Event
-                        </button>
-
-                        <button class="filter-btn" data-category="Pengabdian">
-                            Pengabdian
-                        </button>
-
+                        <button class="filter-btn active" data-category="">Semua</button>
+                        <button class="filter-btn" data-category="Pengumuman">Pengumuman</button>
+                        <button class="filter-btn" data-category="Kegiatan">Kegiatan</button>
+                        <button class="filter-btn" data-category="Pelatihan">Pelatihan</button>
+                        <button class="filter-btn" data-category="Event">Event</button>
+                        <button class="filter-btn" data-category="Pengabdian">Pengabdian</button>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-        <!-- =========================
-            FEATURED NEWS
-        ========================== -->
-
-        <section class="featured-information">
-
+        <!-- ================= HIGHLIGHT NEWS ================= -->
+        <section class="featured-information section">
             <div class="container">
-
                 <div class="section-title">
-
-                    <span>
-
-                        Highlight
-
-                    </span>
-
-                    <h2>
-
-                        Informasi Terbaru
-
-                    </h2>
-
-                    <p>
-
-                        Berita utama dan informasi terbaru dari
-                        Badan Eksekutif Mahasiswa Fakultas
-                        Ilmu Komputer.
-
-                    </p>
-
+                    <span class="section-subtitle">Sorotan Utama</span>
+                    <h2>Informasi Pilihan Terkini</h2>
+                    <p>Berita utama dan kabar terkini seputar aktivitas Fakultas Ilmu Komputer.</p>
                 </div>
 
                 <div id="featuredContainer" class="featured-wrapper">
-
-                    <!-- informasi.js -->
-
+                    <!-- Render otomatis via informasi.js -->
                 </div>
-
             </div>
-
         </section>
 
-        <!-- =========================
-            ALL INFORMATION
-        ========================== -->
-
-        <section class="information-list">
-
+        <!-- ================= ALL NEWS ================= -->
+        <section class="information-list section">
             <div class="container">
-
                 <div class="section-title">
-
-                    <span>
-
-                        Semua Informasi
-
-                    </span>
-
-                    <h2>
-
-                        Berita, Agenda & Pengumuman
-
-                    </h2>
-
-                    <p>
-
-                        Seluruh informasi terbaru mengenai
-                        kegiatan dan program kerja
-                        BEM Fakultas Ilmu Komputer.
-
-                    </p>
-
+                    <span class="section-subtitle">Arsip Kabar</span>
+                    <h2>Semua Berita & Agenda</h2>
+                    <p>Jelajahi seluruh kumpulan artikel, pengumuman, dan agenda kegiatan.</p>
                 </div>
 
                 <div class="information-grid" id="informationContainer">
-
-                    <!-- informasi.js -->
-
+                    <!-- Render otomatis via informasi.js -->
                 </div>
 
                 <div class="pagination" id="pagination">
-
+                    <!-- Render pagination via informasi.js -->
                 </div>
-
             </div>
-
         </section>
 
-        <!-- =========================
-            CTA
-        ========================== -->
-
-        <section class="cta">
-
+        <!-- ================= CTA ================= -->
+        <section class="cta section">
             <div class="container">
-
-                <h2>
-
-                    Jangan Sampai Ketinggalan Informasi
-
-                </h2>
-
-                <p>
-
-                    Ikuti seluruh kegiatan, agenda,
-                    dan pengumuman terbaru dari
-                    Badan Eksekutif Mahasiswa
-                    Fakultas Ilmu Komputer.
-
-                </p>
-
-                <a href="../index.html#contact" class="btn btn-primary">
-
-                    Hubungi Kami
-
-                </a>
-
+                <div class="cta-box">
+                    <span class="section-subtitle">Media & Informasi</span>
+                    <h2>Ingin Mempublikasikan Kegiatan di BEM FIK?</h2>
+                    <p>
+                        HMPS, UKM, atau civitas akademika yang ingin membagikan informasi acara atau prestasi mahasiswa dapat menghubungi Departemen Komunikasi dan Informasi.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="kontak.html" class="btn btn-primary">
+                            <i class="ri-mail-send-line"></i> Hubungi KOMINFO
+                        </a>
+                        <a href="../index.html" class="btn btn-outline">
+                            <i class="ri-home-4-line"></i> Kembali ke Beranda
+                        </a>
+                    </div>
+                </div>
             </div>
-
         </section>
-
     </main>
 
-    <!-- =========================
-        FOOTER
-    ========================== -->
-
+    <!-- Footer -->
     <footer id="footer"></footer>
 
-    <!-- =========================
-        SCRIPTS
-    ========================== -->
-
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
+    <!-- Scripts -->
     <script src="../js/data-loader.js"></script>
-
-    <script src="../js/app.js"></script>
-
     <script src="../js/informasi.js"></script>
-
     <script src="../js/animation.js"></script>
-
+    <script src="../js/app.js"></script>
 </body>
 
 </html>

@@ -2,267 +2,194 @@
 <html lang="id">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Divisi | BEM Fakultas Ilmu Komputer</title>
+    <meta name="description" content="Informasi detail departemen dan divisi Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer UBP Karawang.">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
 
-    <title>Detail Divisi | BEM FIK</title>
+    <link rel="icon" href="../assets/logo/logo.png">
 
-    <link rel="icon" href="../assets/images/logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 </head>
 
 <body>
 
-    <!-- Loader -->
-    <div class="loader">
-        <div class="spinner"></div>
-    </div>
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
 
-    <!-- Navbar -->
+    <!-- Header & Navbar -->
     <header id="header"></header>
 
-    <!--=====================================
-HERO
-======================================-->
+    <main>
+        <!-- ================= HERO DETAIL DIVISI ================= -->
+        <section class="division-detail-hero page-header">
+            <div class="container">
+                <div class="hero-grid page-header-grid">
+                    <div class="hero-content page-header-content">
+                        <span class="page-badge">
+                            <i class="ri-building-line"></i> Departemen BEM FIK
+                        </span>
 
-    <section class="division-detail-hero">
+                        <h1 id="divisionName">Memuat Divisi...</h1>
 
-        <div class="container">
+                        <div class="division-hero-logo mobile-hero-image">
+                            <img id="divisionImage" src="../assets/images/no-image.png" alt="Logo Divisi" onerror="handleImageError(this)">
+                        </div>
 
-            <div class="hero-grid">
+                        <p id="divisionDescription">Memuat informasi deskripsi divisi...</p>
 
-                <div class="hero-content">
+                        <div class="page-action hero-buttons">
+                            <a href="#program" class="btn btn-primary">
+                                <i class="ri-flag-2-line"></i> Program Kerja
+                            </a>
+                            <a href="divisi.html" class="btn btn-outline">
+                                <i class="ri-arrow-left-line"></i> Semua Divisi
+                            </a>
+                        </div>
+                    </div>
 
-                    <span class="hero-badge">
+                    <div class="division-hero-logo desktop-hero-image">
+                        <img id="divisionImageDesktop" src="../assets/images/no-image.png" alt="Logo Divisi" onerror="handleImageError(this)">
+                    </div>
+                </div>
+            </div>
 
-                        <i class="ri-building-line"></i>
+            <div class="page-blob blob-1"></div>
+            <div class="page-blob blob-2"></div>
+        </section>
 
-                        Divisi
+        <!-- ================= INFO STATISTIK DIVISI ================= -->
+        <section class="division-info stats">
+            <div class="container">
+                <div class="stats-grid info-grid">
+                    <div class="stat-card info-card">
+                        <i class="ri-user-star-line" style="font-size: 28px; margin-bottom: 8px; display: inline-block;"></i>
+                        <h3 id="divisionLeader">-</h3>
+                        <span>Ketua / Kepala Departemen</span>
+                    </div>
 
-                    </span>
+                    <div class="stat-card info-card">
+                        <i class="ri-team-line" style="font-size: 28px; margin-bottom: 8px; display: inline-block;"></i>
+                        <h3 id="divisionMember">0 Orang</h3>
+                        <span>Jumlah Anggota</span>
+                    </div>
 
-                    <h1 id="divisionName">
+                    <div class="stat-card info-card">
+                        <i class="ri-calendar-check-line" style="font-size: 28px; margin-bottom: 8px; display: inline-block;"></i>
+                        <h3>Periode 2026</h3>
+                        <span>Masa Kepengurusan</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        Memuat...
 
-                    </h1>
 
-                    <p id="divisionDescription">
+        <!-- ================= TUGAS & FUNGSI ================= -->
+        <section class="task-section section" id="tugas">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Tupoksi</span>
+                    <h2>Tugas & Tanggung Jawab</h2>
+                    <p>Fungsi utama departemen dalam struktur kepengurusan BEM FIK.</p>
+                </div>
 
-                        Memuat informasi divisi...
+                <div id="divisionTask" class="task-grid">
+                    <!-- Diisi oleh detail.js -->
+                </div>
+            </div>
+        </section>
 
+        <!-- ================= PROGRAM KERJA DIVISI ================= -->
+        <section class="program-section section" id="program">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Program Kerja</span>
+                    <h2>Program Kerja Departemen</h2>
+                    <p>Daftar inisiatif dan program kerja yang dirancang dan dijalankan oleh divisi ini.</p>
+                </div>
+
+                <div id="programContainer" class="card-grid program-grid">
+                    <!-- Diisi oleh detail.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ANGGOTA PENGURUS ================= -->
+        <section class="member-section section" id="pengurus">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Kepengurusan</span>
+                    <h2>Susunan Anggota Departemen</h2>
+                    <p>Anggota pengurus yang bertugas dalam departemen ini.</p>
+                </div>
+
+                <div id="memberContainer" class="member-grid pengurus-grid">
+                    <!-- Diisi oleh detail.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="division-cta section">
+            <div class="container">
+                <div class="cta-box">
+                    <span class="section-subtitle">Sinergi & Kolaborasi</span>
+                    <h2>Bersama Membangun Fakultas Ilmu Komputer</h2>
+                    <p>
+                        Setiap departemen memiliki peran penting dalam mendukung seluruh kegiatan dan kemajuan kemahasiswaan FIK UBP Karawang.
                     </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#program" class="btn btn-primary">
-
-                            Program Kerja
-
+                    <div class="cta-buttons">
+                        <a href="kontak.html" class="btn btn-primary">
+                            <i class="ri-mail-line"></i> Hubungi Kami
                         </a>
-
-                        <a href="../divisi.html" class="btn btn-outline">
-
-                            Kembali
-
+                        <a href="divisi.html" class="btn btn-outline">
+                            <i class="ri-layout-grid-line"></i> Divisi Lainnya
                         </a>
-
                     </div>
-
                 </div>
-
-                <div class="hero-image">
-
-                    <img id="divisionImage" src="../assets/images/division-placeholder.png" alt="Divisi">
-
-                </div>
-
             </div>
-
-        </div>
-
-    </section>
-
-    <section class="division-info">
-
-        <div class="container">
-
-            <div class="info-grid">
-
-                <div class="info-card">
-
-                    <i class="ri-user-star-line"></i>
-
-                    <h3>Ketua Divisi</h3>
-
-                    <p id="divisionLeader">-</p>
-
-                </div>
-
-                <div class="info-card">
-
-                    <i class="ri-team-line"></i>
-
-                    <h3>Jumlah Anggota</h3>
-
-                    <p id="divisionMember">0 Orang</p>
-
-                </div>
-
-                <div class="info-card">
-
-                    <i class="ri-calendar-line"></i>
-
-                    <h3>Masa Jabatan</h3>
-
-                    <p>2026 - 2027</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="vision-section">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>VISI & MISI</span>
-
-                <h2>Arah Gerak Divisi</h2>
-
-            </div>
-
-            <div class="vision-grid">
-
-                <div class="vision-card">
-
-                    <div class="card-icon">
-
-                        <i class="ri-eye-line"></i>
-
-                    </div>
-
-                    <h3>Visi</h3>
-
-                    <p id="divisionVision"></p>
-
-                </div>
-
-                <div class="vision-card">
-
-                    <div class="card-icon">
-
-                        <i class="ri-flag-line"></i>
-
-                    </div>
-
-                    <h3>Misi</h3>
-
-                    <ul id="divisionMission">
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="task-section">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>TUGAS</span>
-
-                <h2>Tugas dan Fungsi</h2>
-
-            </div>
-
-            <div id="divisionTask" class="task-grid">
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="member-section">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>PENGURUS</span>
-
-                <h2>Anggota Divisi</h2>
-
-            </div>
-
-            <div id="memberContainer" class="member-grid">
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="division-cta">
-
-        <div class="container">
-
-            <div class="cta-box">
-
-                <h2>
-
-                    Bersama Membangun Fakultas Ilmu Komputer
-
-                </h2>
-
-                <p>
-
-                    Setiap divisi memiliki peran penting dalam
-                    mendukung seluruh kegiatan organisasi.
-
-                </p>
-
-                <a href="../kontak.html" class="btn btn-primary">
-
-                    Hubungi Kami
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer id="footer"></footer>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
+    <!-- Scripts -->
     <script src="../js/data-loader.js"></script>
-    <script src="../js/app.js"></script>
     <script src="../js/detail.js"></script>
     <script src="../js/animation.js"></script>
+    <script src="../js/app.js"></script>
 
+    <script>
+        // Sync desktop image src from mobile image src when loaded
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new MutationObserver(() => {
+                const mobImg = document.getElementById("divisionImage");
+                const deskImg = document.getElementById("divisionImageDesktop");
+                if (mobImg && deskImg && mobImg.src) {
+                    deskImg.src = mobImg.src;
+                    deskImg.alt = mobImg.alt;
+                }
+            });
+            const target = document.getElementById("divisionImage");
+            if (target) observer.observe(target, { attributes: true });
+        });
+    </script>
 </body>
 
 </html>

@@ -2,267 +2,186 @@
 <html lang="id">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak & Sekretariat | BEM Fakultas Ilmu Komputer</title>
+    <meta name="description" content="Hubungi BEM Fakultas Ilmu Komputer Universitas Buana Perjuangan Karawang untuk informasi, kerja sama, advokasi, dan kemitraan.">
+    <meta name="keywords" content="Kontak BEM FIK, Sekretariat BEM FIK, Email BEM FIK, UBP Karawang">
+    <meta name="author" content="BEM Fakultas Ilmu Komputer">
+    <meta name="theme-color" content="#2563EB">
 
-    <title>Kontak | BEM Fakultas Ilmu Komputer</title>
+    <link rel="icon" href="../assets/logo/logo.png">
 
-    <link rel="icon" href="../assets/images/logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 </head>
 
 <body class="kontak-page">
 
-    <!-- Loader -->
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="ri-arrow-up-line"></i>
+    </button>
 
-    <div class="loader">
-        <div class="spinner"></div>
-    </div>
-
-    <!-- Navbar -->
-
+    <!-- Header & Navbar -->
     <header id="header"></header>
 
-    <!-- Hero -->
+    <main>
+        <!-- ================= HERO KONTAK ================= -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-grid">
+                    <div class="page-header-content">
+                        <span class="page-badge">
+                            <i class="ri-customer-service-2-line"></i> Layanan Komunikasi
+                        </span>
 
-    <section class="page-header">
+                        <h1>
+                            Kontak BEM Fakultas Ilmu Komputer
+                        </h1>
 
-        <div class="container page-header-grid">
+                        <p>
+                            Kami siap mendengar dan merespon setiap pertanyaan, usulan kerja sama, media partner, maupun audiensi kemahasiswaan dengan BEM Fakultas Ilmu Komputer.
+                        </p>
 
-            <div>
+                        <div class="page-action">
+                            <a href="#contactSection" class="btn btn-primary">
+                                <i class="ri-contacts-line"></i> Informasi Kontak
+                            </a>
+                        </div>
+                    </div>
 
-                <span class="subtitle">
-                    📞 Hubungi Kami
-                </span>
+                    <div class="page-header-image">
+                        <img src="../assets/images/about/about-banner.jpg" alt="Kontak BEM FIK" onerror="handleImageError(this)">
+                    </div>
+                </div>
+            </div>
 
-                <h1>
-                    Kontak BEM Fakultas Ilmu Komputer
-                </h1>
+            <div class="page-blob blob-1"></div>
+            <div class="page-blob blob-2"></div>
+        </section>
 
-                <p>
-                    Jangan ragu menghubungi kami apabila memiliki pertanyaan, saran,
-                    maupun ingin berkolaborasi bersama BEM Fakultas Ilmu Komputer.
-                </p>
-
-                <div class="hero-button">
-
-                    <a href="#contactSection" class="btn-primary">
-
-                        Lihat Kontak
-
-                    </a>
-
-                    <a href="aspirasi.html" class="btn-outline">
-
-                        Kirim Aspirasi
-
-                    </a>
-
+        <!-- ================= CONTACT SECTION ================= -->
+        <section class="contact-section section" id="contactSection">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Informasi Kontak</span>
+                    <h2>Kanal Komunikasi Resmi</h2>
+                    <p>
+                        Silakan hubungi kami melalui kanal resmi berikut atau kunjungi sekretariat kami secara langsung.
+                    </p>
                 </div>
 
-            </div>
-
-            <div class="page-image">
-
-                <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=900&q=80" alt="Kontak BEM FIK">
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Contact -->
-
-    <section class="contact-section section" id="contactSection">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>Informasi Kontak</span>
-
-                <h2>Kami Siap Membantu Anda</h2>
-
-                <p>
-                    Silakan hubungi kami melalui informasi berikut atau kirimkan
-                    pesan langsung melalui formulir di bawah ini.
-                </p>
-
-            </div>
-
-            <div class="contact-grid">
-
-                <!-- Informasi -->
-
-                <div class="contact-info">
-
-                    <div class="contact-card" data-aos="fade-up">
-
+                <div class="contact-grid">
+                    <div class="contact-card">
                         <i class="ri-map-pin-line"></i>
-
-                        <h3>Sekretariat</h3>
-
-                        <p id="contactAddress">
-
-                            Fakultas Ilmu Komputer
-
-                        </p>
-
+                        <div class="contact-card-body">
+                            <h3>Sekretariat BEM</h3>
+                            <p id="contactAddress">
+                                Fakultas Ilmu Komputer, Universitas Buana Perjuangan Karawang, Jl. HS. Ronggowaluyo, Telukjambe Timur, Karawang, Jawa Barat 41361
+                            </p>
+                        </div>
                     </div>
 
-                    <!-- Jam operasional masih statis, belum ada di kontak.json -->
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
-
-                        <i class="ri-time-line"></i>
-
-                        <h3>Jam Operasional</h3>
-
-                        <p id="contactHours">
-
-                            Senin - Jumat, 09.00 - 16.00 WIB
-
-                        </p>
-
-                    </div>
-
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
-
+                    <div class="contact-card">
                         <i class="ri-mail-line"></i>
-
-                        <h3>Email</h3>
-
-                        <p id="contactEmail">
-
-                            bemfik@example.com
-
-                        </p>
-
+                        <div class="contact-card-body">
+                            <h3>Email Resmi</h3>
+                            <p id="contactEmail">
+                                <a href="mailto:bemfikubpkarawang@gmail.com">bemfikubpkarawang@gmail.com</a>
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
-
-                        <i class="ri-phone-line"></i>
-
-                        <h3>WhatsApp</h3>
-
-                        <p id="contactPhone">
-
-                            +62 xxx xxxx xxxx
-
-                        </p>
-
-                    </div>
-
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
-
+                    <div class="contact-card">
                         <i class="ri-instagram-line"></i>
+                        <div class="contact-card-body">
+                            <h3>Instagram Resmi</h3>
+                            <p id="contactInstagram">
+                                <a href="https://www.instagram.com/bemfikubpk" target="_blank" rel="noopener noreferrer">@bemfikubpk</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <h3>Instagram</h3>
+        <!-- ================= FAQ ================= -->
+        <section class="faq-section section">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Pertanyaan Umum</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Jawaban atas pertanyaan yang sering diajukan seputar BEM Fakultas Ilmu Komputer.</p>
+                </div>
 
-                        <p id="contactInstagram">
-
-                            @bemfik
-
+                <div class="faq">
+                    <div class="faq-item">
+                        <h3>1. Berapa lama respon pesan atau surat resmi?</h3>
+                        <p>
+                            Tim BEM FIK akan merespon email dan pesan dalam waktu maksimal 1x24 jam pada hari dan jam kerja operasional.
                         </p>
-
                     </div>
 
+                    <div class="faq-item">
+                        <h3>2. Bagaimana cara mengajukan kemitraan / media partner?</h3>
+                        <p>
+                            Proposal kerja sama atau media partner dapat dikirimkan ke email resmi kami <strong>bemfikubpkarawang@gmail.com</strong> dengan subjek format <em>[Media Partner / Kerja Sama] - Nama Kegiatan</em>.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>3. Apakah mahasiswa bisa berkonsultasi langsung?</h3>
+                        <p>
+                            Bisa. Mahasiswa FIK dipersilakan datang ke ruang sekretariat BEM FIK untuk berkonsultasi atau berdiskusi mengenai program kemahasiswaan.
+                        </p>
+                    </div>
                 </div>
-            </section>
-
-    <!-- FAQ -->
-
-    <section class="section">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <span>Pertanyaan Umum</span>
-
-                <h2>Yang Sering Ditanyakan</h2>
-
             </div>
+        </section>
 
-            <div class="faq">
-
-                <div class="faq-item" data-aos="fade-up">
-
-                    <h3>1. Berapa lama pesan direspon?</h3>
-
-                    <p>
-                        Tim kami akan merespon pesan yang masuk dalam waktu
-                        1x24 jam pada hari kerja.
-                    </p>
-
+        <!-- ================= MAPS ================= -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-subtitle">Lokasi Kampus</span>
+                    <h2>Denah Lokasi Kampus</h2>
+                    <p>Universitas Buana Perjuangan Karawang — Fakultas Ilmu Komputer.</p>
                 </div>
 
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-
-                    <h3>2. Bisakah berkonsultasi langsung?</h3>
-
-                    <p>
-                        Tentu, mahasiswa dapat datang langsung ke sekretariat
-                        BEM sesuai jam operasional yang tertera.
-                    </p>
-
+                <div id="mapContainer">
+                    <iframe
+                        id="contactMapFrame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.542837452435!2d107.301311!3d-6.3236155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69762d4c316603%3A0x50a8005dfd52a897!2sBuana%20Perjuangan%20University!5e0!3m2!1sen!2sid!4v1784648156424!5m2!1sen!2sid"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Lokasi BEM FIK UBP Karawang">
+                    </iframe>
                 </div>
-
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-
-                    <h3>3. Ingin menyampaikan kritik atau saran?</h3>
-
-                    <p>
-                        Kunjungi halaman
-                        <a href="aspirasi.html">Aspirasi Mahasiswa</a>
-                        untuk menyampaikan kritik, saran, maupun ide secara
-                        lebih terdokumentasi.
-                    </p>
-
-                </div>
-
             </div>
-
-        </div>
-
-    </section>
-
-    <!-- Maps -->
-
-    <section class="map-section">
-
-        <div class="container">
-
-            <div id="mapContainer">
-
-                <iframe id="contactMapFrame" src="" width="100%" height="400" style="border:0;" allowfullscreen=""
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-
-            </div>
-
-        </div>
-
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-
     <footer id="footer"></footer>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
+    <!-- Scripts -->
     <script src="../js/data-loader.js"></script>
-    <script src="../js/app.js"></script>
     <script src="../js/animation.js"></script>
-
+    <script src="../js/app.js"></script>
 </body>
 
 </html>

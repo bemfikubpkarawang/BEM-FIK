@@ -1,5 +1,5 @@
 /* =====================================================
-   DETAIL PAGE
+   DETAIL PAGE JS (BEM FIK)
 ===================================================== */
 
 function getUrlParameter(name) {
@@ -7,308 +7,165 @@ function getUrlParameter(name) {
     return params.get(name);
 }
 
-function renderNotFound() {
+/* =====================================================
+   DETAIL DIVISI
+===================================================== */
 
-    document.getElementById("divisionName").textContent =
-        "Data Tidak Ditemukan";
+function renderDivisiNotFound() {
+    const nameEl = document.getElementById("divisionName");
+    const descEl = document.getElementById("divisionDescription");
+    if (nameEl) nameEl.textContent = "Data Tidak Ditemukan";
+    if (descEl) descEl.textContent = "Divisi yang Anda cari tidak tersedia atau parameter tidak valid.";
 
-    document.getElementById("divisionDescription").textContent =
-        "Divisi yang Anda cari tidak tersedia.";
+    const leaderEl = document.getElementById("divisionLeader");
+    const memberEl = document.getElementById("divisionMember");
+    const visionEl = document.getElementById("divisionVision");
+    if (leaderEl) leaderEl.textContent = "-";
+    if (memberEl) memberEl.textContent = "-";
+    if (visionEl) visionEl.textContent = "-";
 
-    document.getElementById("divisionLeader").textContent = "-";
-
-    document.getElementById("divisionMember").textContent = "-";
-
-    document.getElementById("divisionVision").textContent = "-";
-
-    document.getElementById("divisionMission").innerHTML = "";
-
-    document.getElementById("divisionTask").innerHTML = "";
-
-    if (document.getElementById("programContainer")) {
-        document.getElementById("programContainer").innerHTML = "";
-    }
-
-    document.getElementById("memberContainer").innerHTML = "";
+    const missionEl = document.getElementById("divisionMission");
+    const taskEl = document.getElementById("divisionTask");
+    const progEl = document.getElementById("programContainer");
+    const memEl = document.getElementById("memberContainer");
+    if (missionEl) missionEl.innerHTML = "";
+    if (taskEl) taskEl.innerHTML = "";
+    if (progEl) progEl.innerHTML = "";
+    if (memEl) memEl.innerHTML = "";
 }
 
 function loadDetailDivisi() {
+    const idParam = getUrlParameter("id");
+    const id = Number(idParam);
 
-    const id = Number(getUrlParameter("id"));
-
-    if (!id) {
-        renderNotFound();
+    if (!idParam || isNaN(id)) {
+        renderDivisiNotFound();
         return;
     }
 
-    if (!DATA.divisiDetail) {
-        console.error("divisi-detail.json belum dimuat");
+    const divisiList = getDivisiDetail();
+    if (!divisiList) {
+        console.warn("Data divisi belum dimuat");
         return;
     }
 
-    const data = getById(DATA.divisiDetail, id);
-
+    const data = getById(divisiList, id);
     if (!data) {
-        renderNotFound();
+        renderDivisiNotFound();
         return;
     }
 
-    document.title = `${data.singkatan} | BEM FIK`;
+    document.title = `${data.singkatan || data.nama} | BEM FIK`;
 
-    document.getElementById("divisionName").textContent =
-        data.nama;
+    const nameEl = document.getElementById("divisionName");
+    const descEl = document.getElementById("divisionDescription");
+    const imgEl = document.getElementById("divisionImage");
+    const leaderEl = document.getElementById("divisionLeader");
+    const memberEl = document.getElementById("divisionMember");
+    const visionEl = document.getElementById("divisionVision");
 
-    document.getElementById("divisionDescription").textContent =
-        data.deskripsi;
+    if (nameEl) nameEl.textContent = data.nama;
+    if (descEl) descEl.textContent = data.deskripsi;
+    
+    if (imgEl) {
+        const logoSrc = data.logo || data.gambar || "";
+        if (logoSrc) {
+            const cleanSrc = BASE_PATH + logoSrc.replace("../", "");
+            imgEl.src = cleanSrc;
+            imgEl.alt = data.nama;
+            const imgElDesktop = document.getElementById("divisionImageDesktop");
+            if (imgElDesktop) {
+                imgElDesktop.src = cleanSrc;
+                imgElDesktop.alt = data.nama;
+            }
+        }
+    }
+    
+    if (leaderEl) leaderEl.textContent = data.ketua || "Kepala Departemen";
+    if (memberEl) memberEl.textContent = `${data.jumlahAnggota || (data.pengurus ? data.pengurus.length : 0)} Orang`;
 
-    document.getElementById("divisionImage").src =
-        BASE_PATH + data.gambar.replace("../", "");
-
-    document.getElementById("divisionImage").alt =
-        data.nama;
-
-    document.getElementById("divisionLeader").textContent =
-        data.ketua;
-
-    document.getElementById("divisionMember").textContent =
-        `${data.jumlahAnggota} Orang`;
-
-    document.getElementById("divisionVision").textContent =
-        data.visi;
-
-    /* ===========================
-       MISI
-    =========================== */
-
-    const missionContainer =
-        document.getElementById("divisionMission");
-
-    missionContainer.innerHTML = "";
-
-    data.misi.forEach(misi => {
-
-        missionContainer.innerHTML += `
-            <li>
-
-                <i class="ri-check-line"></i>
-
-                <span>${misi}</span>
-
-            </li>
-        `;
-
-    });
-
-        /* ===========================
-       TUGAS
-    =========================== */
-
-    const taskContainer =
-        document.getElementById("divisionTask");
-
-    taskContainer.innerHTML = "";
-
-    data.tugas.forEach(tugas => {
-
-        taskContainer.innerHTML += `
-            <div class="task-card">
-
-                <div class="task-icon">
-
-                    <i class="ri-checkbox-circle-line"></i>
-
+    // Tugas
+    const taskContainer = document.getElementById("divisionTask");
+    if (taskContainer) {
+        const tugasList = data.tugas || [];
+        if (Array.isArray(tugasList) && tugasList.length > 0) {
+            taskContainer.innerHTML = tugasList.map(tugas => `
+                <div class="task-card">
+                    <div class="task-icon">
+                        <i class="ri-checkbox-circle-line"></i>
+                    </div>
+                    <p>${typeof tugas === 'object' ? (tugas.isi || tugas.text) : tugas}</p>
                 </div>
+            `).join("");
+        }
+    }
 
-                <p>${tugas}</p>
-
-            </div>
-        `;
-
-    });
-
-    /* ===========================
-       PROGRAM KERJA
-    =========================== */
-
-    const programContainer =
-        document.getElementById("programContainer");
-
+    // Program Kerja
+    const programContainer = document.getElementById("programContainer");
     if (programContainer) {
-
-        programContainer.innerHTML = "";
-
-        data.programKerja.forEach(program => {
-
-            programContainer.innerHTML += `
+        const prokers = data.programKerja || (typeof getProgramByDivisi === "function" ? getProgramByDivisi(data.singkatan) : []);
+        if (Array.isArray(prokers) && prokers.length > 0) {
+            programContainer.innerHTML = prokers.map(program => `
                 <div class="program-card">
-
-                    <h3>${program.nama}</h3>
-
-                    <p>${program.deskripsi}</p>
-
+                    <div class="program-card-header">
+                        <div class="program-card-icon">
+                            <i class="ri-flag-line"></i>
+                        </div>
+                        <span class="program-tag">${data.singkatan || 'Divisi'}</span>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-title">${program.nama}</h3>
+                        <p class="program-summary">${program.deskripsi || ''}</p>
+                    </div>
+                </div>
+            `).join("");
+        } else {
+            programContainer.innerHTML = `
+                <div class="empty-state" style="grid-column: 1/-1;">
+                    <p>Program kerja divisi akan diperbarui secara berkala.</p>
                 </div>
             `;
-
-        });
-
+        }
     }
 
-    /* ===========================
-       PENGURUS
-    =========================== */
+    // Pengurus
+    const memberContainer = document.getElementById("memberContainer");
+    if (memberContainer) {
+        const pengurusList = data.pengurus || (typeof getPengurusByDivisi === "function" ? getPengurusByDivisi(data.singkatan) : []);
+        const allPengurus = getPengurus();
+        if (Array.isArray(pengurusList) && pengurusList.length > 0) {
+            memberContainer.innerHTML = pengurusList.map(member => {
+                const match = allPengurus ? allPengurus.find(p => p.nama.trim().toLowerCase() === member.nama.trim().toLowerCase()) : null;
+                const fotoSrc = match && match.foto ? (BASE_PATH + match.foto) : null;
 
-    const memberContainer =
-        document.getElementById("memberContainer");
+                if (fotoSrc) {
+                    return `
+                    <div class="member-card">
+                        <div class="member-avatar" style="overflow: hidden; border-radius: 50%;">
+                            <img src="${fotoSrc}" alt="${member.nama}" style="width: 100%; height: 100%; object-fit: cover;" onerror="handleImageError(this)">
+                        </div>
+                        <div class="member-content">
+                            <h3>${member.nama}</h3>
+                            <span>${member.jabatan}</span>
+                        </div>
+                    </div>
+                    `;
+                }
 
-    memberContainer.innerHTML = "";
-
-    data.pengurus.forEach(member => {
-
-        memberContainer.innerHTML += `
-            <div class="member-card">
-
-                <div class="member-avatar">
-
-                    <i class="ri-user-3-line"></i>
-
+                return `
+                <div class="member-card">
+                    <div class="member-avatar">
+                        <i class="ri-user-3-line"></i>
+                    </div>
+                    <div class="member-content">
+                        <h3>${member.nama}</h3>
+                        <span>${member.jabatan}</span>
+                    </div>
                 </div>
-
-                <div class="member-content">
-
-                    <h3>${member.nama}</h3>
-
-                    <span>${member.jabatan}</span>
-
-                </div>
-
-            </div>
-        `;
-
-    });
-}
-
-/* =====================================================
-   DETAIL INFORMASI
-===================================================== */
-
-function loadDetailInformasi() {
-
-    const slug = getUrlParameter("slug");
-
-    if (!slug) return;
-
-    const informasi = getInformasi();
-
-    if (!informasi) {
-
-        console.error("informasi.json belum dimuat");
-
-        return;
-
+                `;
+            }).join("");
+        }
     }
-
-    const data = informasi.find(item => item.slug === slug);
-
-    if (!data) {
-
-        console.error("Informasi tidak ditemukan");
-
-        return;
-
-    }
-
-    document.title = `${data.judul} | BEM FIK`;
-
-    document.getElementById("infoTitle").textContent =
-        data.judul;
-
-    document.getElementById("infoCategory").textContent =
-        data.kategori;
-
-    document.getElementById("infoDate").textContent =
-        new Date(data.tanggal).toLocaleDateString("id-ID", {
-
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-
-        });
-
-    document.getElementById("infoAuthor").textContent =
-        data.penulis;
-
-    document.getElementById("infoImage").src =
-        BASE_PATH + data.thumbnail;
-
-    document.getElementById("infoImage").alt =
-        data.judul;
-
-    document.getElementById("infoContent").innerHTML = `
-
-        <p>
-
-            ${data.deskripsi}
-
-        </p>
-
-    `;
-
-    renderTags(data.tags);
-
-    renderGallery(data.gambar);
-
-    renderRelated(data.id);
-
-}
-
-function renderTags(tags){
-
-    const container =
-        document.getElementById("tagContainer");
-
-    if(!container) return;
-
-    container.innerHTML="";
-
-    tags.forEach(tag=>{
-
-        container.innerHTML+=`
-
-        <span class="tag">
-
-            #${tag}
-
-        </span>
-
-        `;
-
-    });
-
-}
-
-function renderGallery(images){
-
-    const container =
-        document.getElementById("galleryContainer");
-
-    if(!container) return;
-
-    container.innerHTML="";
-
-    images.forEach(img=>{
-
-        container.innerHTML+=`
-
-        <div class="gallery-item">
-
-            <img src="${BASE_PATH+img}">
-
-        </div>
-
-        `;
-
-    });
-
 }
 
 /* =====================================================
@@ -316,7 +173,6 @@ function renderGallery(images){
 ===================================================== */
 
 function renderProkerNotFound() {
-
     const title = document.getElementById("programTitle");
     const division = document.getElementById("programDivision");
     const summary = document.getElementById("programSummary");
@@ -324,72 +180,75 @@ function renderProkerNotFound() {
     if (title) title.textContent = "Program Tidak Ditemukan";
     if (division) division.textContent = "-";
     if (summary) summary.textContent = "Program kerja yang Anda cari tidak tersedia atau ID tidak valid.";
-
 }
 
 function loadDetailProgram() {
+    const idParam = getUrlParameter("id");
+    const slugParam = getUrlParameter("slug");
 
-    const id = getUrlParameter("id");
-
-    if (!id) {
+    if (!idParam && !slugParam) {
         renderProkerNotFound();
         return;
     }
 
-    const data = getById(DATA.proker, id);
+    const prokerList = getProgramKerja();
+    if (!prokerList) {
+        console.warn("Data proker belum dimuat");
+        return;
+    }
+
+    let data = null;
+    if (idParam) {
+        data = getById(prokerList, idParam);
+    }
+    if (!data && slugParam) {
+        data = getBySlug(prokerList, slugParam);
+    }
 
     if (!data) {
         renderProkerNotFound();
         return;
     }
 
-    /* ---- Document title ---- */
     document.title = `${data.nama} | BEM FIK`;
 
-    /* ---- Breadcrumb ---- */
     const breadcrumb = document.getElementById("breadcrumbCurrent");
     if (breadcrumb) breadcrumb.textContent = data.nama;
 
-    /* ---- Hero section ---- */
-    const programTitle    = document.getElementById("programTitle");
+    const programTitle = document.getElementById("programTitle");
     const programDivision = document.getElementById("programDivision");
-    const programSummary  = document.getElementById("programSummary");
+    const programSummary = document.getElementById("programSummary");
 
-    if (programTitle)    programTitle.textContent    = data.nama;
-    if (programDivision) programDivision.textContent = `${data.divisi} • ${data.kategori}`;
-    if (programSummary)  programSummary.textContent  = data.deskripsi;
+    if (programTitle) programTitle.textContent = data.nama;
+    if (programDivision) programDivision.textContent = `${data.divisi} • ${data.kategori || 'Program Kerja'}`;
+    if (programSummary) programSummary.textContent = data.deskripsi;
 
-    /* ---- Meta info ---- */
-    const programDivisi   = document.getElementById("programDivisi");
+    const programDivisi = document.getElementById("programDivisi");
     const programTimeline = document.getElementById("programTimeline");
-    const programStatus   = document.getElementById("programStatus");
+    const programStatus = document.getElementById("programStatus");
 
-    if (programDivisi)   programDivisi.textContent   = data.divisi;
-    if (programTimeline) programTimeline.textContent = data.periode;
+    if (programDivisi) programDivisi.textContent = data.divisi;
+    if (programTimeline) programTimeline.textContent = `Periode ${data.periode || '2026'}`;
     if (programStatus) {
-        const label = data.statusLabel || data.status || "Direncanakan";
-        const cls   = {
-            berjalan:    "status-berjalan",
-            selesai:     "status-selesai",
+        const label = data.statusLabel || (data.status === "berjalan" ? "Sedang Berjalan" : (data.status === "selesai" ? "Selesai" : "Direncanakan"));
+        const cls = {
+            berjalan: "status-berjalan",
+            selesai: "status-selesai",
             direncanakan: "status-direncanakan"
         }[data.status] || "status-direncanakan";
         programStatus.innerHTML = `<span class="program-status-badge ${cls}">${label}</span>`;
     }
 
-    /* ---- Tujuan ---- */
     const programGoal = document.getElementById("programGoal");
     if (programGoal) {
-        programGoal.textContent = data.tujuan ||
-            "Belum ada informasi tujuan untuk program ini.";
+        programGoal.textContent = data.tujuan || "Mendukung pelaksanaan program kerja dan pengembangan potensi mahasiswa.";
     }
 
-    /* ---- Deskripsi Lengkap ---- */
     const programDescription = document.getElementById("programDescription");
     if (programDescription) {
         programDescription.textContent = data.deskripsi_lengkap || data.deskripsi;
     }
 
-    /* ---- Sasaran ---- */
     const programTarget = document.getElementById("programTarget");
     if (programTarget) {
         if (Array.isArray(data.sasaran) && data.sasaran.length > 0) {
@@ -400,11 +259,10 @@ function loadDetailProgram() {
                 </li>
             `).join("");
         } else {
-            programTarget.innerHTML = `<li>Informasi sasaran belum tersedia.</li>`;
+            programTarget.innerHTML = `<li><i class="ri-check-double-line"></i><span>Mahasiswa Fakultas Ilmu Komputer</span></li>`;
         }
     }
 
-    /* ---- Output ---- */
     const programOutput = document.getElementById("programOutput");
     if (programOutput) {
         if (Array.isArray(data.output) && data.output.length > 0) {
@@ -415,53 +273,52 @@ function loadDetailProgram() {
                 </li>
             `).join("");
         } else {
-            programOutput.innerHTML = `<li>Informasi output belum tersedia.</li>`;
+            programOutput.innerHTML = `<li><i class="ri-checkbox-circle-line"></i><span>Kegiatan terlaksana sesuai target perencanaan</span></li>`;
         }
     }
 
-    /* ---- Galeri ---- */
     const programGallery = document.getElementById("programGallery");
     if (programGallery) {
         if (Array.isArray(data.galeri) && data.galeri.length > 0) {
             programGallery.innerHTML = data.galeri.map(img => `
                 <div class="gallery-item">
-                    <img src="${BASE_PATH}${img}" alt="Dokumentasi ${data.nama}" loading="lazy">
+                    <img src="${BASE_PATH}${img}" alt="Dokumentasi ${data.nama}" loading="lazy" onerror="handleImageError(this)">
                 </div>
             `).join("");
         } else {
             programGallery.innerHTML = `
-                <div class="gallery-empty">
+                <div class="gallery-empty" style="grid-column: 1/-1;">
                     <i class="ri-image-2-line"></i>
-                    <p>Dokumentasi belum tersedia.</p>
+                    <p>Dokumentasi kegiatan akan segera diperbarui setelah pelaksanaan.</p>
                 </div>
             `;
         }
     }
 
-    /* ---- Program Terkait ---- */
+    // Program Terkait
     const relatedContainer = document.getElementById("relatedPrograms");
-    if (relatedContainer && DATA.proker) {
-        const related = DATA.proker
-            .filter(p => p.divisi === data.divisi && p.id !== data.id)
+    if (relatedContainer && prokerList) {
+        const related = prokerList
+            .filter(p => String(p.id) !== String(data.id))
             .slice(0, 3);
 
         if (related.length > 0) {
             const getStatusClass = (status) => {
                 switch ((status || "").toLowerCase()) {
-                    case "berjalan":    return "status-berjalan";
-                    case "selesai":     return "status-selesai";
-                    default:            return "status-direncanakan";
+                    case "berjalan": return "status-berjalan";
+                    case "selesai": return "status-selesai";
+                    default: return "status-direncanakan";
                 }
             };
             relatedContainer.innerHTML = related.map(p => `
-                <a href="proker-detail.html?id=${p.id}" class="program-card">
+                <a href="proker-detail.html?id=${p.id}&slug=${p.slug || ''}" class="program-card">
                     <div class="program-card-header">
                         <div class="program-card-icon">
-                            <i class="${p.icon}"></i>
+                            <i class="${p.icon || 'ri-flag-line'}"></i>
                         </div>
                         <div class="program-card-badges">
-                            <span class="program-tag">${p.divisi}</span>
-                            <span class="program-status-badge ${getStatusClass(p.status)}">${p.statusLabel || p.status}</span>
+                            <span class="program-tag">${p.kategori || p.divisi}</span>
+                            <span class="program-status-badge ${getStatusClass(p.status)}">${p.statusLabel || p.status || 'Direncanakan'}</span>
                         </div>
                     </div>
                     <div class="program-card-body">
@@ -469,69 +326,145 @@ function loadDetailProgram() {
                         <p class="program-summary">${p.deskripsi}</p>
                     </div>
                     <div class="program-meta">
-                        <span><i class="ri-calendar-line"></i> ${p.periode}</span>
+                        <span><i class="ri-calendar-line"></i> ${p.periode || '2026'}</span>
+                        <span class="program-kategori"><i class="ri-price-tag-3-line"></i> ${p.kategori || 'Program'}</span>
                     </div>
                 </a>
             `).join("");
         } else {
-            relatedContainer.innerHTML = `<p class="empty-state">Tidak ada program lain dari divisi ini.</p>`;
+            relatedContainer.innerHTML = `<p class="empty-state" style="grid-column: 1/-1;">Program kerja lainnya akan segera ditambahkan.</p>`;
         }
     }
-
 }
 
 /* =====================================================
-   INIT
+   DETAIL INFORMASI
+===================================================== */
+
+function loadDetailInformasi() {
+    const slug = getUrlParameter("slug");
+    if (!slug) return;
+
+    const informasiList = getInformasi() || DATA.informasi;
+    if (!informasiList) {
+        console.warn("Data informasi belum dimuat");
+        return;
+    }
+
+    const data = informasiList.find(item => item.slug === slug);
+    if (!data) {
+        console.warn("Informasi tidak ditemukan");
+        return;
+    }
+
+    document.title = `${data.judul} | BEM FIK`;
+
+    const titleEl = document.getElementById("infoTitle");
+    const catEl = document.getElementById("infoCategory");
+    const dateEl = document.getElementById("infoDate");
+    const authorEl = document.getElementById("infoAuthor");
+    const imgEl = document.getElementById("infoImage");
+    const contentEl = document.getElementById("infoContent");
+
+    if (titleEl) titleEl.textContent = data.judul;
+    if (catEl) catEl.textContent = data.kategori || "Berita";
+    if (dateEl) {
+        dateEl.textContent = new Date(data.tanggal).toLocaleDateString("id-ID", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+    }
+    if (authorEl) authorEl.textContent = data.penulis || "BEM FIK";
+    if (imgEl && data.thumbnail) {
+        imgEl.src = BASE_PATH + data.thumbnail;
+        imgEl.alt = data.judul;
+    }
+    if (contentEl) {
+        const paragraphs = (data.deskripsi || "").split("\n\n");
+        contentEl.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join("");
+    }
+
+    // Tags
+    const tagContainer = document.getElementById("tagContainer");
+    if (tagContainer && Array.isArray(data.tags)) {
+        tagContainer.innerHTML = data.tags.map(tag => `<span class="tag">#${tag}</span>`).join("");
+    }
+
+    // Gallery / Dokumentasi Berita
+    const galleryContainer = document.getElementById("galleryContainer");
+    if (galleryContainer) {
+        if (Array.isArray(data.gambar) && data.gambar.length > 0) {
+            galleryContainer.innerHTML = data.gambar.map(img => `
+                <div class="gallery-item">
+                    <img src="${BASE_PATH}${img}" alt="${data.judul}" loading="lazy" onerror="handleImageError(this)">
+                </div>
+            `).join("");
+        } else {
+            galleryContainer.innerHTML = `
+                <div class="gallery-empty" style="grid-column: 1/-1;">
+                    <i class="ri-image-2-line"></i>
+                    <p>Dokumentasi tambahan untuk informasi ini belum tersedia.</p>
+                </div>
+            `;
+        }
+    }
+
+    // Related Information
+    const relatedContainer = document.getElementById("relatedContainer");
+    if (relatedContainer && Array.isArray(informasiList)) {
+        const related = informasiList
+            .filter(item => item.id !== data.id && item.status === "publish")
+            .slice(0, 3);
+
+        if (related.length > 0) {
+            relatedContainer.innerHTML = related.map(item => `
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="${BASE_PATH}${item.thumbnail}" alt="${item.judul}" onerror="handleImageError(this)">
+                        <span class="news-category">${item.kategori || 'Berita'}</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="ri-calendar-line"></i> ${new Date(item.tanggal).toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" })}</span>
+                        </div>
+                        <h3>${item.judul}</h3>
+                        <p>${item.ringkasan}</p>
+                        <a href="informasi-detail.html?slug=${item.slug}" class="news-link">
+                            Baca Selengkapnya <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </article>
+            `).join("");
+        }
+    }
+}
+
+/* =====================================================
+   INIT DETAIL PAGE
 ===================================================== */
 
 async function initDetail() {
-
     try {
-
-        await loadAllData();
-
-        const page = window.location.pathname
-            .split("/")
-            .pop();
-
-        switch (page) {
-
-            case "divisi-detail.html":
-                loadDetailDivisi();
-                break;
-
-            case "proker-detail.html":
-                if (typeof loadDetailProgram === "function") {
-                    loadDetailProgram();
-                }
-                break;
-
-            case "informasi-detail.html":
-                if (typeof loadDetailInformasi === "function") {
-                    loadDetailInformasi();
-                }
-                break;
-
+        if (typeof loadAllData === "function") {
+            await loadAllData();
         }
+        const page = window.location.pathname.split("/").pop();
 
+        if (page.includes("divisi-detail")) {
+            loadDetailDivisi();
+        } else if (page.includes("proker-detail")) {
+            loadDetailProgram();
+        } else if (page.includes("informasi-detail")) {
+            loadDetailInformasi();
+        }
+    } catch (error) {
+        console.error("Detail init error:", error);
     }
-
-    catch (error) {
-
-        console.error(error);
-
-        renderNotFound();
-
-    }
-
 }
 
-/* =====================================================
-   START
-===================================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
-
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDetail);
+} else {
     initDetail();
-
-});
+}

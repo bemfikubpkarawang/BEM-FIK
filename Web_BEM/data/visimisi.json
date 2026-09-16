@@ -3,7 +3,6 @@
     "judul": "Visi",
     "isi": "Mewujudkan BEM FIK sebagai organisasi yang kolaboratif, aspiratif, adaptif, dan berdampak dalam mendukung pengembangan potensi mahasiswa."
   },
-
   "misi": [
     {
       "id": 1,
@@ -15,14 +14,13 @@
     },
     {
       "id": 3,
-      "isi": "Memperkuat kolaborasi dengan HMPS, UKM, alumni dan pihak fakultas dalam menciptakan lingkungan kemahasiswaan yang aktif."
+      "isi": "Memperkuat kolaborasi dengan HMPS, UKM, BEM antar Fakultas dan pihak fakultas dalam menciptakan lingkungan kemahasiswaan yang aktif."
     },
     {
       "id": 4,
       "isi": "Mendorong pengembangan kompetensi mahasiswa melalui kegiatan yang relavan dengan kebutuhan akademik, organisasi dan dunia kerja."
     }
   ],
-
   "nilaiOrganisasi": [
     {
       "nama": "Integritas",
@@ -50,6 +48,5 @@
       "icon": "fas fa-sync-alt"
     }
   ],
-
   "tagline": "Kolaboratif • Inovatif • Adaptif • Berdampak"
 }

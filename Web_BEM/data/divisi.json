@@ -29,35 +29,6 @@
   },
   {
     "id": 2,
-    "nama": "Pengembangan Sumber Daya Mahasiswa",
-    "singkatan": "PSDM",
-    "logo": "assets/images/divisi/psdm.png",
-    "icon": "fas fa-users",
-    "warna": "#2563EB",
-    "deskripsi": "Departemen yang berfokus pada kaderisasi, pembinaan, dan pengembangan kepemimpinan mahasiswa.",
-    "visi": "Mewujudkan mahasiswa yang aktif, berkarakter, dan memiliki jiwa kepemimpinan.",
-    "tugas": [
-      "Melaksanakan kaderisasi.",
-      "Mengembangkan kepemimpinan mahasiswa.",
-      "Menyelenggarakan pelatihan.",
-      "Melakukan pembinaan pengurus."
-    ],
-    "koordinator": {
-      "nama": "",
-      "jabatan": "Kepala Departemen PSDM",
-      "foto": "assets/images/pengurus/default.png"
-    },
-    "wakil": null,
-    "jumlahAnggota": 4,
-    "proker": [
-      "Workshop CV & Interview",
-      "Public Speaking",
-      "Career Talk",
-      "Leadership Training"
-    ]
-  },
-  {
-    "id": 3,
     "nama": "Minat dan Bakat",
     "singkatan": "MINBA",
     "logo": "assets/images/divisi/minba.png",
@@ -81,7 +52,36 @@
     "proker": [
       "PKKMB",
       "Inagurasi",
-      "Lomba Antar Universitas"
+      "Pekan Olahraga Mahasiswa (POM)"
+    ]
+  },
+    {
+    "id": 3,
+    "nama": "Pengembangan Sumber Daya Mahasiswa",
+    "singkatan": "PSDM",
+    "logo": "assets/images/divisi/pssdm.png",
+    "icon": "fas fa-users",
+    "warna": "#2563EB",
+    "deskripsi": "Departemen yang berfokus pada kaderisasi, pembinaan, dan pengembangan kepemimpinan mahasiswa.",
+    "visi": "Mewujudkan mahasiswa yang aktif, berkarakter, dan memiliki jiwa kepemimpinan.",
+    "tugas": [
+      "Melaksanakan kaderisasi.",
+      "Mengembangkan kepemimpinan mahasiswa.",
+      "Menyelenggarakan pelatihan.",
+      "Melakukan pembinaan pengurus."
+    ],
+    "koordinator": {
+      "nama": "",
+      "jabatan": "Kepala Departemen PSDM",
+      "foto": "assets/images/pengurus/default.png"
+    },
+    "wakil": null,
+    "jumlahAnggota": 4,
+    "proker": [
+      "Workshop CV & Interview",
+      "Public Speaking",
+      "Career Talk",
+      "Leadership Training"
     ]
   },
   {

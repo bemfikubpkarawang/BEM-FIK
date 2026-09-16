@@ -6,7 +6,7 @@
     "jabatan": "Ketua",
     "divisi": "Pimpinan",
     "angkatan": "2024",
-    "foto": "assets/images/pengurus/default.png",
+    "foto": "assets/images/pengurus/alya.jpg",
     "email": "",
     "instagram": "",
     "linkedin": "",
@@ -20,7 +20,7 @@
     "jabatan": "Wakil Ketua",
     "divisi": "Pimpinan",
     "angkatan": "2023",
-    "foto": "assets/images/pengurus/default.png",
+    "foto": "assets/images/pengurus/ahmad.jpg",
     "email": "",
     "instagram": "",
     "linkedin": "",
@@ -29,12 +29,12 @@
   },
   {
     "id": 3,
-    "nama": "Rio Rashya Syadzidy",
+    "nama": "Rio Rashya Syadzily",
     "nim": "24416255201209",
     "jabatan": "Sekretaris",
     "divisi": "Pimpinan",
     "angkatan": "2024",
-    "foto": "assets/images/pengurus/default.png",
+    "foto": "assets/images/pengurus/rio.jpg",
     "email": "",
     "instagram": "",
     "linkedin": "",
@@ -48,14 +48,13 @@
     "jabatan": "Bendahara",
     "divisi": "Pimpinan",
     "angkatan": "2024",
-    "foto": "assets/images/pengurus/default.png",
+    "foto": "assets/images/pengurus/alfi.jpg",
     "email": "",
     "instagram": "",
     "linkedin": "",
     "deskripsi": "Bendahara Badan Eksekutif Mahasiswa Fakultas Ilmu Komputer.",
     "urutan": 4
   },
-
   {
     "id": 5,
     "nama": "Dicky Wahyu Nugraha",
@@ -63,17 +62,17 @@
     "jabatan": "Ketua Divisi",
     "divisi": "PSDM",
     "angkatan": "2023",
-    "foto": "assets/images/pengurus/default.png",
+    "foto": "assets/images/pengurus/dicky.jpg",
     "urutan": 5
   },
   {
     "id": 6,
-    "nama": "",
-    "nim": "",
-    "jabatan": "Wakil Ketua Divisi",
+    "nama": "Vina Ayulia Tari",
+    "nim": "25416255201180",
+    "jabatan": "Anggota",
     "divisi": "PSDM",
-    "angkatan": "",
-    "foto": "assets/images/pengurus/default.png",
+    "angkatan": "2025",
+    "foto": "assets/images/pengurus/vinay.jpg",
     "urutan": 6
   },
   {
@@ -83,20 +82,19 @@
     "jabatan": "Anggota",
     "divisi": "PSDM",
     "angkatan": "2025",
-    "foto": "assets/images/pengurus/default.png",
+    "foto": "assets/images/pengurus/rizha.jpg",
     "urutan": 7
   },
   {
     "id": 8,
-    "nama": "Alika Ramadhani Putri Promono",
+    "nama": "Alika Ramadhani Putri Pramono",
     "nim": "25416255201168",
     "jabatan": "Anggota",
     "divisi": "PSDM",
     "angkatan": "2025",
-    "foto": "assets/images/pengurus/default.png",
+    "foto": "assets/images/pengurus/alika.jpg",
     "urutan": 8
   },
-
   {
     "id": 9,
     "nama": "Anwar Ramadhan",
@@ -104,129 +102,107 @@
     "jabatan": "Ketua Divisi",
     "divisi": "SOSPOL",
     "angkatan": "2024",
-    "foto": "assets/images/pengurus/default.png",
+    "foto": "assets/images/pengurus/anwar.jpg",
     "urutan": 9
   },
   {
     "id": 10,
-    "nama": "",
-    "nim": "",
-    "jabatan": "Wakil Ketua Divisi",
-    "divisi": "SOSPOL",
-    "angkatan": "",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 10
-  },
-  {
-    "id": 11,
-    "nama": "Siti Tyara Renata",
-    "nim": "25416255201161",
-    "jabatan": "Anggota",
-    "divisi": "SOSPOL",
-    "angkatan": "2025",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 11
-  },
-  {
-    "id": 12,
     "nama": "Aditya Devandra",
     "nim": "25416255201215",
     "jabatan": "Anggota",
     "divisi": "SOSPOL",
     "angkatan": "2025",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 12
+    "foto": "assets/images/pengurus/devan.jpg",
+    "urutan": 10
   },
-
   {
-    "id": 13,
+    "id": 11,
     "nama": "Refa Agustyah",
     "nim": "24416255201126",
     "jabatan": "Ketua Divisi",
     "divisi": "MINBA",
     "angkatan": "2024",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 13
+    "foto": "assets/images/pengurus/refa.jpg",
+    "urutan": 11
   },
   {
-    "id": 14,
+    "id": 12,
     "nama": "Vina Amalia",
     "nim": "24416255201125",
     "jabatan": "Wakil Ketua Divisi",
     "divisi": "MINBA",
     "angkatan": "2024",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 14
+    "foto": "assets/images/pengurus/vina.jpg",
+    "urutan": 12
   },
   {
-    "id": 15,
-    "nama": "Faruq Amru Abdul Fawaz",
+    "id": 13,
+    "nama": "Faruq Amru Abdul Fawwaz",
     "nim": "25416255201128",
     "jabatan": "Anggota",
     "divisi": "MINBA",
     "angkatan": "2025",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 15
+    "foto": "assets/images/pengurus/faruq.jpg",
+    "urutan": 13
   },
   {
-    "id": 16,
+    "id": 14,
     "nama": "Muhammad Rendyansyah Dwi Anggara",
     "nim": "24416255201170",
     "jabatan": "Anggota",
     "divisi": "MINBA",
     "angkatan": "2024",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 16
+    "foto": "assets/images/pengurus/rendy.jpg",
+    "urutan": 14
   },
-
   {
-    "id": 17,
-    "nama": "Alifa Faturrahman Pratama",
+    "id": 15,
+    "nama": "Atila Faturrahman Pratama",
     "nim": "24416255201043",
     "jabatan": "Ketua Divisi",
     "divisi": "KOMINFO",
     "angkatan": "2024",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 17
+    "foto": "assets/images/pengurus/fatur.jpg",
+    "urutan": 15
   },
   {
-    "id": 18,
+    "id": 16,
     "nama": "Tiara Novita Sari",
     "nim": "24416255201146",
     "jabatan": "Wakil Ketua Divisi",
     "divisi": "KOMINFO",
     "angkatan": "2024",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 18
+    "foto": "assets/images/pengurus/tiara.jpg",
+    "urutan": 16
   },
   {
-    "id": 19,
-    "nama": "Syahla Syifa Bella",
+    "id": 17,
+    "nama": "Syarla Syifa Bella",
     "nim": "25416255201138",
     "jabatan": "Anggota",
     "divisi": "KOMINFO",
     "angkatan": "2025",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 19
+    "foto": "assets/images/pengurus/syarla.jpg",
+    "urutan": 17
   },
   {
-    "id": 20,
+    "id": 18,
     "nama": "Nadia Rahma Anindya",
     "nim": "25416255201167",
     "jabatan": "Anggota",
     "divisi": "KOMINFO",
     "angkatan": "2025",
-    "foto": "assets/images/pengurus/default.png",
-    "urutan": 20
+    "foto": "assets/images/pengurus/nadia.jpg",
+    "urutan": 18
   },
   {
-  "id": 21,
-  "nama": "Nadiyah Fakhar",
-  "nim": "25416255201146",
-  "jabatan": "Anggota",
-  "divisi": "KOMINFO",
-  "angkatan": "2025",
-  "foto": "assets/images/pengurus/default.png",
-  "urutan": 21
-}
+    "id": 19,
+    "nama": "Nadiyah Fakhar",
+    "nim": "25416255201146",
+    "jabatan": "Anggota",
+    "divisi": "KOMINFO",
+    "angkatan": "2025",
+    "foto": "assets/images/pengurus/nadiyah.jpg",
+    "urutan": 19
+  }
 ]
