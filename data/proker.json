@@ -22,28 +22,6 @@
     "galeri": []
   },
   {
-    "id": 2,
-    "nama": "Seminar Nasional",
-    "slug": "seminar-nasional",
-    "icon": "ri-presentation-line",
-    "kategori": "Program Utama",
-    "divisi": "Komunikasi dan Informasi",
-    "status": "direncanakan",
-    "statusLabel": "Direncanakan",
-    "periode": "2026",
-    "gambar": "assets/images/hero/hero-bem.jpg",
-    "deskripsi": "Seminar nasional yang menghadirkan narasumber untuk memberikan wawasan dan pengetahuan kepada mahasiswa.",
-    "tujuan": "Menambah wawasan dan pengetahuan mahasiswa melalui kegiatan berskala nasional.",
-    "deskripsi_lengkap": "Seminar nasional merupakan kegiatan edukatif yang menghadirkan narasumber untuk membahas topik yang relevan dengan kebutuhan dan perkembangan mahasiswa.",
-    "sasaran": [
-      "Mahasiswa Fakultas Ilmu Komputer"
-    ],
-    "output": [
-      "Seminar nasional terlaksana dengan baik"
-    ],
-    "galeri": []
-  },
-  {
     "id": 3,
     "nama": "Pekan Olahraga Mahasiswa (POM)",
     "slug": "pom",
