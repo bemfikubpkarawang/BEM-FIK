@@ -60,5 +60,21 @@
     ],
     "deskripsi": "Dokumentasi kompetisi Mobile Legends dalam rangkaian kegiatan Pekan Olahraga Mahasiswa (POM), sebagai ajang kreativitas, strategi, dan sportivitas antarmahasiswa.",
     "id": 4
+  },
+  {
+    "judul": "POM Mobile Legends",
+    "kategori": "POM",
+    "tanggal": "2026-09-24",
+    "thumbnail": "assets/images/admin/1795449233041-chp03p-juara1.jpg",
+    "gambar": [
+      "assets/images/admin/1795449233041-chp03p-juara1.jpg",
+      "assets/images/admin/1795449242068-9ff329-juara3.jpg",
+      "assets/images/admin/1795449244880-iusat4-juara2.jpg",
+      "assets/images/admin/1795449248298-wmo08f-a02988d9-3b2f-45c3-b07e-a89edca2a73c.jpg",
+      "assets/images/admin/1795449251492-5le6ut-18b4601a-0a7f-4855-adc8-25d9d09bf38e.jpg",
+      "assets/images/admin/1795449254139-63rkej-3a2b37ce-e075-4966-8b39-83c600cb96ce.jpg"
+    ],
+    "deskripsi": "Dokumentasi kegiatan Pekan Olahraga Mahasiswa (POM) pada cabang olahraga Badminton. Kegiatan ini menjadi ajang bagi mahasiswa untuk menunjukkan kemampuan, semangat kompetisi, kerja sama, serta menjunjung tinggi sportivitas dalam setiap pertandingan.",
+    "id": 5
   }
 ]
